@@ -8,6 +8,7 @@ import type { RawData } from './types';
  * changes between deploys.
  */
 const VERSION = process.env.NEXT_PUBLIC_BUILD_TIME || '';
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export function useData() {
   const [data, setData] = useState<RawData | null>(null);
@@ -15,7 +16,7 @@ export function useData() {
 
   useEffect(() => {
     let cancelled = false;
-    const url = VERSION ? `data.json?v=${encodeURIComponent(VERSION)}` : 'data.json';
+    const url = VERSION ? `${BASE}/data.json?v=${encodeURIComponent(VERSION)}` : `${BASE}/data.json`;
     fetch(url, { cache: 'default' })
       .then((r) => {
         if (!r.ok) throw new Error(`Failed to load data.json (${r.status})`);

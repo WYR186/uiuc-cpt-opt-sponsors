@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -7,7 +7,12 @@ on:
 
 permissions:
   contents: read
-  deployments: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,17 +26,20 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build:data
       - run: pnpm build
         env:
-          NEXT_PUBLIC_LOGODEV_TOKEN: ${{ secrets.LOGODEV_TOKEN }}
-          NEXT_PUBLIC_PLAUSIBLE_DOMAIN: ${{ vars.PLAUSIBLE_DOMAIN }}
+          NEXT_PUBLIC_BASE_PATH: /uiuc-cpt-opt-sponsors
           NEXT_PUBLIC_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: out
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

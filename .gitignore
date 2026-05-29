@@ -5,7 +5,7 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
-public/data.json
+# public/data.json is committed so CI (which has no xlsx files) can deploy
 public/logos
 
 # Source xlsx files are copyright UIUC Career Center — not redistributed.
