@@ -1,0 +1,1765 @@
+# Employer alias merge rules.
+# Keys are raw names found in the xlsx; values are the canonical name to merge to.
+# After whitespace normalization, the script looks up each raw name here.
+# Match is case-sensitive (post-trim) — keep entries verbatim from build-data logs.
+
+# Amazon family
+"Amazon and its affiliates and subsidiaries": Amazon
+"Amazon Services": Amazon
+"Amazon Web Services": Amazon
+"Amazon Development Center US": Amazon
+"Amazon.com Services": Amazon
+"Amazon Robotics": Amazon
+
+# ByteDance family
+"TikTok": ByteDance
+"Bytedance": ByteDance
+"ByteDance": ByteDance
+"TikTok Inc": ByteDance
+
+# Meta family
+"Meta Platforms": Meta
+"Facebook": Meta
+
+# Deloitte family
+"Deloitte and Touche": Deloitte
+"Deloitte Tax": Deloitte
+"Deloitte Consulting": Deloitte
+"Deloitte Services": Deloitte
+
+# Ernst & Young
+"Ernst and Young US": Ernst & Young
+"Ernst and Young": Ernst & Young
+"EY": Ernst & Young
+
+# Google / Alphabet
+"Google LLC": Google
+"Alphabet": Google
+
+# Tesla
+"Tesla Inc": Tesla
+
+# Apple
+"Apple Inc": Apple
+
+# AMD
+"Advanced Micro Devices": AMD
+
+# University of Illinois Urbana-Champaign
+"University of Illinois Urbana Champaign": University of Illinois Urbana-Champaign
+"University of Illinois at Urbana Champaign": University of Illinois Urbana-Champaign
+"University of Illinois at Urbana-Champaign": University of Illinois Urbana-Champaign
+"University of Illinois": University of Illinois Urbana-Champaign
+
+# Rivian
+"Rivian Automotive": Rivian
+
+# Uber
+"Uber Technologies": Uber
+
+# Cisco
+"Cisco Systems": Cisco
+
+# Eli Lilly
+"Eli Lilly and Company": Eli Lilly
+
+# Oracle
+"Oracle America": Oracle
+
+# JPMorgan
+"JPMorgan Chase Bank NA": JPMorgan Chase
+"JPMorgan Chase": JPMorgan Chase
+"JP Morgan Chase": JPMorgan Chase
+"J.P. Morgan": JPMorgan Chase
+
+# PwC
+
+# KPMG
+"KPMG LLP": KPMG
+
+# PayPal
+"PayPal Holdings": PayPal
+
+# Walmart
+"Walmart Inc": Walmart
+
+# Microsoft
+"Microsoft Corporation": Microsoft
+
+# Goldman Sachs
+"Goldman Sachs Group": Goldman Sachs
+"Goldman Sachs & Co": Goldman Sachs
+
+# Intel
+"Intel Corporation": Intel
+
+# NVIDIA
+"NVIDIA Corporation": NVIDIA
+
+# Synchrony
+
+# Motorola
+"Motorola Solutions": Motorola Solutions
+
+# Snowflake
+"Snowflake Computing": Snowflake
+
+# Databricks
+"Databricks Inc": Databricks
+
+# CCC Intelligent Solutions
+"CCC Information Services": CCC Intelligent Solutions
+
+# ─────────────────────────────────────────────────────────────────────────
+# Bulk merges from scripts/suggest-aliases.ts (totals ≥ 3, generated 2026-05-13).
+# Each LHS is a raw employer name found in the xlsx files; RHS is the canonical.
+# Casing / punctuation / 'Inc'/'LLC'/'Corp' variants collapsed.
+# ─────────────────────────────────────────────────────────────────────────
+"Amazon its affiliates and subsidiaries": Amazon
+"Amazon and its affiliates and its subsidiaries": Amazon
+"Amazon Development Center": Amazon
+"amazon": Amazon
+"AMAZON": Amazon
+"AMAZON WEB SERVICES": Amazon
+"AMAZON SERVICES": Amazon
+"University Of Illinois Urbana Champaign": University of Illinois Urbana-Champaign
+"University of illinois Urbana Champaign": University of Illinois Urbana-Champaign
+"GOOGLE": Google
+"Deloitte Services LP": Deloitte
+"Deloitte US": Deloitte
+"APPLE": Apple
+"NVidia": NVIDIA
+"Tesla Co": Tesla
+"TESLA": Tesla
+"INTEL": Intel
+"Intel technologies": Intel
+"Bytedance Inc.": ByteDance
+"Bytedance Ltd": ByteDance
+"ByteDance Ltd": ByteDance
+"GOLDMAN SACHS SERVICES": Goldman Sachs
+"salesforce": Salesforce
+"SALESFORCE": Salesforce
+"KPMG US": KPMG
+"YAHOO": Yahoo
+"ORACLE": Oracle
+"RIVIAN": Rivian
+"QUALCOMM TECHNOLOGIES": Qualcomm
+"qualcomm technologies": Qualcomm
+"IBM US": IBM
+"bloomberg": Bloomberg LP
+"Agco": AGCO
+"UBER TECHNOLOGIES": Uber
+"uber technologies": Uber
+"Massachusetts Institute Of Technology": Massachusetts Institute of Technology
+"massachusetts institute of technology": Massachusetts Institute of Technology
+"ADOBE": Adobe
+"Micron technology": Micron Technology
+"Schlumberger Technology Corporation": Schlumberger Technology
+"Schlumberger Limited": Schlumberger Technology
+"CROWE": Crowe
+"CATERPILLAR": Caterpillar
+"UChicago Argonne, LLC": UChicago Argonne
+"UCHICAGO ARGONNE": UChicago Argonne
+"WAYFAIR": Wayfair
+"VISA USA": Visa
+"VISA": Visa
+"GOLDMAN SACHS and CO": Goldman Sachs and Co
+"Goldman Sachs and CO": Goldman Sachs and Co
+"NORTHWESTERN UNIVERSITY": Northwestern University
+"SERVICENOW": ServiceNow
+"Servicenow": ServiceNow
+"servicenow": ServiceNow
+"ZS associates": ZS Associates
+"ZS ASSOCIATES": ZS Associates
+"CME group": CME Group
+"CME": CME Group
+"Capital One Services": Capital One
+"Capital One NA": Capital One
+"COUNTRY Financial": Country Financial
+"COUNTRY financial": Country Financial
+"Country financial": Country Financial
+"Pure Storage Inc.": Pure Storage
+"PURE STORAGE": Pure Storage
+"Archer Daniels Midland Co": Archer Daniels Midland Company
+"ARCHER DANIELS MIDLAND CO": Archer Daniels Midland Company
+"CITIBANK NA": Citibank NA
+"Citibank": Citibank NA
+"Citibank na": Citibank NA
+"University of Illinois uiuc": University of Illinois UIUC
+"University of Illinois (UIUC)": University of Illinois UIUC
+"University of illinois UIUC": University of Illinois UIUC
+"Antra, Inc.": Antra
+"SNOWFLAKE": Snowflake
+"Discover Financial Services Services": Discover Financial Services
+"Lam Research Corporation": Lam Research
+"LAM RESEARCH": Lam Research
+"LAM Research": Lam Research
+"eBay Inc.": eBay
+"Ebay": eBay
+"Morningstar Inc.": Morningstar
+"LifeFoundry, Inc.": LifeFoundry
+"Lifefoundry": LifeFoundry
+"THORNTON TOMASETTI": Thornton Tomasetti
+"The MathWorks Inc.": The MathWorks
+"The Mathworks": The MathWorks
+"THE MATHWORKS": The MathWorks
+"JOHN DEERE": John Deere
+"MaloneBailey LLP": MaloneBailey
+"Malonebailey": MaloneBailey
+"Paypal Holdings Inc.": PayPal
+"PAYPAL": PayPal
+"Paypal": PayPal
+"Paypal Holdings": PayPal
+"Populus Group LLC": Populus Group
+"DRW Holdings LLC": DRW Holdings
+"DRW holdings": DRW Holdings
+"VMware Inc.": VMware
+"VMWare": VMware
+"Jump Operations, LLC": Jump Operations
+"MONSANTO COMPANY": Monsanto Company
+"Kohler": Kohler Co
+"Barclays Group": Barclays Services
+"Barclays US": Barclays Services
+"Reconstruct Inc.": Reconstruct
+"RECONSTRUCT": Reconstruct
+"Hiregenics": HireGenics
+"Mott MacDonald Group": Mott MacDonald Holdings
+"MOTT MACDONALD GROUP": Mott MacDonald Holdings
+"Mott Macdonald": Mott MacDonald Holdings
+"Citadel Enterprise Americas": Citadel
+"Citadel LLC": Citadel
+"Citadel Enterprise Americas Services": Citadel
+"Citadel Americas": Citadel
+"Citadel Americas Services": Citadel
+"Citadel Enterprise": Citadel
+"Applied Materials, Inc.": Applied Materials
+"Analog Devices, Inc.": Analog Devices
+"Oath Holding": Oath Holdings
+"ANSYS Inc.": Ansys
+"ANSYS": Ansys
+"Genentech USA": Genentech
+"Texas Instruments Inc.": Texas Instruments
+"TEXAS INSTRUMENTS": Texas Instruments
+"Robert Half International": Robert Half
+"Robert Half International, Inc.": Robert Half
+"ROBERT HALF": Robert Half
+"AbbVie US": AbbVie
+"AbbVie Inc.": AbbVie
+"Abbvie": AbbVie
+"ABBVIE": AbbVie
+"SAP": SAP America
+"SAP Americas": SAP America
+"SAP North America": SAP America
+"CHEN and FAN ACCOUNTANCY": Chen and Fan Accountancy
+"CHEN AND FAN ACCOUNTANCY": Chen and Fan Accountancy
+"BANK OF AMERICA NA": Bank of America
+"Bank of America NA": Bank of America
+"Bank Of America": Bank of America
+"ASM America Inc.": ASM America
+"ASM": ASM America
+"UNIVERSITY OF CALIFORNIA DAVIS": University of California Davis
+"Tata Consultancy Services": Tata Consultancy Services Limited
+"Tata Consultancy Services Ltd": Tata Consultancy Services Limited
+"TATA CONSULTANCY SERVICES LIMITED": Tata Consultancy Services Limited
+"Tata Consultancy Services LTD": Tata Consultancy Services Limited
+"TSMC Arizona Company": TSMC Arizona
+"Graybar Electric Company": Graybar Electric
+"Graybar Electric Co": Graybar Electric
+"Graybar electric": Graybar Electric
+"Jacobs Engineering": Jacobs Engineering Group
+"JACOBS ENGINEERING GROUP": Jacobs Engineering Group
+"Expedia Group": Expedia
+"Expedia, Inc.": Expedia
+"AutoDesk": Autodesk
+"Pinterest, Inc.": Pinterest
+"HINETICS": Hinetics
+"Akuna Capital LLC": Akuna Capital
+"Zillow": Zillow Group
+"PRICEWATERHOUSECOOPERS": PricewaterhouseCoopers LLP
+"PriceWaterhouseCoopers": PricewaterhouseCoopers LLP
+"LAWRENCE BERKELEY NATIONAL LABORATORY": Lawrence Berkeley National Laboratory
+"Beaconfire Staffing Solutions": BeaconFire Staffing Solutions
+"ASML": ASML US LP
+"ASML US": ASML US LP
+"ASML US Lp": ASML US LP
+"McKinsey and Co": McKinsey and Company
+"Mckinsey and Company": McKinsey and Company
+"Standish Management US": Standish Management
+"HDR Inc.": HDR
+"University Of Chicago": University of Chicago
+"Roblox Corporation": Roblox
+"ROBLOX": Roblox
+"Western Digital Corporation": Western Digital
+"Western Digital Technologies": Western Digital
+"WESTERN DIGITAL TECHNOLOGIES": Western Digital
+"UNIVERSITY OF FLORIDA": University of Florida
+"Snap Inc.": Snap
+"Yummy future": Yummy Future
+"Marlabs, Inc.": Marlabs
+"Bayer Research And Development": Bayer Research and Development Services
+"AXTRIA": Axtria
+"Splunk Inc.": Splunk
+"MORGAN STANLEY": Morgan Stanley
+"Morgan Stanley Services Group": Morgan Stanley
+"PRO Unlimited, Inc.": PRO Unlimited
+"Pro Unlimited": PRO Unlimited
+"INTEL 100": Intel 100
+"Intel (100)": Intel 100
+"World Bank Group": World Bank
+"University Of Washington": University of Washington
+"WSP": WSP USA
+"Rubrik Inc.": Rubrik
+"Verizon Media Group": Verizon Media
+"NOKIA": Nokia
+"Tencent America LLC": Tencent America
+"AECOM Technical Services, Inc.": AECOM Technical Services
+"Experis": Experis US
+"JH FINDORFF and SON": JH Findorff and Son
+"Tastytrade": tastytrade
+"TastyTrade": tastytrade
+"Langan Engineering and Environmental": Langan Engineering and Environmental Services
+"CHOWBUS": Chowbus
+"Wolfram Alpha": Wolfram Alpha LLC
+"Quicket Solutions Inc.": Quicket Solutions
+"FedEx": FedEx Services
+"Fedex Services": FedEx Services
+"Earthsense": EarthSense
+"Stantec Consulting Services Inc.": Stantec Consulting Services
+"HERE Technologies": HERE North America
+"Here North America": HERE North America
+"Here Technologies": HERE North America
+"Here": HERE North America
+"Carollo Engineers, Inc.": Carollo Engineers
+"Washington University in St. Louis": Washington University in St Louis
+"Godaddy": GoDaddy
+"Belcan Corporation": Belcan
+"Dell Technologies": Dell
+"DELL USA LP": Dell
+"IntelliPro Group": Intellipro Group
+"IntelliPro": Intellipro Group
+"ARM": Arm
+"Arm Ltd": Arm
+"Arm Holdings": Arm
+"ABBOTT": Abbott
+"Runtime Verification Inc.": Runtime Verification
+"Randstad": Randstad North America, LP
+"Randstad USA": Randstad North America, LP
+"Randstad Technologies": Randstad North America, LP
+"Randstad North America LP": Randstad North America, LP
+"Randstad US": Randstad North America, LP
+"Chicago Mercantile Exchange Inc.": Chicago Mercantile Exchange
+"CHICAGO MERCANTILE EXCHANGE": Chicago Mercantile Exchange
+"Gies College of Business University of Illinois": University of Illinois Gies College of Business
+"AON": Aon
+"Aon PLC": Aon
+"SAMSUNG SEMICONDUCTOR": Samsung Semiconductor
+"Applied Pavement Technology, Inc.": Applied Pavement Technology
+"Hewlett Packard": Hewlett Packard Enterprise
+"Hewlett Packard Enterprise Company": Hewlett Packard Enterprise
+"HEWLETT PACKARD ENTERPRISE COMPANY": Hewlett Packard Enterprise
+"STATE FARM": State Farm
+"Boston Consulting Group, Inc.": Boston Consulting Group
+"JPMORGAN CHASE and CO": JPMorgan Chase and Co
+"Axis Capital": AXIS Capital
+"AXIS capital": AXIS Capital
+"AGCO ACCELERATION CENTER": AGCO Acceleration Center
+"Red Hat Inc.": Red Hat
+"MITSUBISHI ELECTRIC RESEARCH LABORATORIES": Mitsubishi Electric Research Laboratories
+"STANTEC": Stantec
+"CodersData": Codersdata
+"Wight and Co": Wight and Company
+"MOLOCO": Moloco
+"Schneider Electric USA Inc.": Schneider Electric
+"Schneider Electric North America": Schneider Electric
+"Schneider Electric USA": Schneider Electric
+"UNIVERSITY OF MINNESOTA": University of Minnesota
+"Meta platform": Meta Platform
+"One Community Global": One Community
+"Trane Technologies Company": Trane Technologies
+"Trane": Trane Technologies
+"PCE PARAGON SOLUTIONS USA": PCE Paragon Solutions USA
+"PCE Paragon Solutions": PCE Paragon Solutions USA
+"Sambanova Systems": SambaNova Systems
+"Sambanova": SambaNova Systems
+"uniuni logistics": UniUni Logistics
+"UNIUNI Logistics": UniUni Logistics
+"Skyworks Inc.": Skyworks Solutions
+"Skyworks": Skyworks Solutions
+"Kiewit Engineering": Kiewit Engineering Group
+"PSYONIC": Psyonic
+"Tusimple": TuSimple
+"Iconma": ICONMA
+"ONETRUST": OneTrust
+"Online Programs department in Gies College of Business": Business Online Programs department in Gies College of Business
+"BMO HARRIS BANK NA": BMO Harris Bank
+"BMO Harris Bank NA": BMO Harris Bank
+"The Boston Consulting Group, Inc.": The Boston Consulting Group
+"HCL America": HCL Global Systems
+"Brigham and women's hospital": "Brigham and Women's Hospital"
+"DFS": DFS Services
+"HungryPanda": HungryPanda US
+"HUNGRYPANDA USA": HungryPanda US
+"AMERICAN ASSOCIATION OF INSURANCE SERVICES": American Association of Insurance Services
+"Islands Trading, LLC": Islands Trading
+"ISLANDS TRADING": Islands Trading
+"UT Battelle (ORNL)": UT Battelle ORNL
+"UT Battelle(ORNL)": UT Battelle ORNL
+"Target Enterprise": Target
+"GIES College of Business University of Illinois at Urbana Champaign": Gies College of Business University of Illinois at Urbana Champaign
+"Gies College of Business University of Illinois at urbana champaign": Gies College of Business University of Illinois at Urbana Champaign
+"Cognizant Technology Solutions US": Cognizant
+"Cognizant Technology Solutions": Cognizant
+"COGNIZANT TECHNOLOGY SOLUTIONS US": Cognizant
+"KALEIDOSCOPE BLOCKCHAIN": Kaleidoscope Blockchain
+"Uber Freight US": Uber Freight
+"Simbiosys": SimBioSys
+"Centific": Centific Global Solutions
+"Centific Technologies": Centific Global Solutions
+"DOORDASH": DoorDash
+"GENSLER": Gensler
+"Capgemini America": Capgemini
+"Blackrock": BlackRock
+"TransUnion LLC": TransUnion
+"Gartner": Gartner Inc.
+"GARTNER": Gartner Inc.
+"Riverbed Technology, Inc.": Riverbed Technology
+"Reinsurance Group Of America": Reinsurance Group of America
+"Hubspot": HubSpot
+"SKIDMORE OWINGS and MERRILL": Skidmore Owings and Merrill
+"Two Sigma Investments, LP": Two Sigma Investments LP
+"Two sigma Investments LP": Two Sigma Investments LP
+"RSM": RSM US
+"RiVos": Rivos
+"Cohnreznick": CohnReznick
+"Robert Bosch LLC": Robert Bosch
+"ACG LLP": ACG
+"The World Bank Group": The World Bank
+"THE WORLD BANK": The World Bank
+"the World Bank": The World Bank
+"NextCapital": NextCapital Group
+"NEXTCAPITAL GROUP": NextCapital Group
+"Terracon Consultants, Inc.": Terracon Consultants
+"Taiwan Semiconductor Manufacturing Company Limited": Taiwan Semiconductor Manufacturing Company
+"Taiwan Semiconductor Manufacturing": Taiwan Semiconductor Manufacturing Company
+"Taiwan Semiconductor Manufacturing Co": Taiwan Semiconductor Manufacturing Company
+"S and P Global": S and P GLOBAL
+"Kelly Services Inc.": Kelly Services
+"Kelly Services Group": Kelly Services
+"Lg Energy Solution Michigan": LG Energy Solution Michigan
+"Sunrise Futures": Sunrise Futures LLC
+"Mastercard International": Mastercard
+"MasterCard": Mastercard
+"MASTERCARD INTERNATIONAL": Mastercard
+"School of Information Sciences University of Illinois Urbana Champaign": University of Illinois Urbana Champaign School of Information Sciences
+"Arup North America Ltd": Arup
+"Arup US": Arup
+"ELECTRIC POWER ENGINEERS": Electric Power Engineers
+"Mathworks": MathWorks
+"community Center for the Arts": Community Center for the Arts
+"Millikin-Decatur Symphony Orchestra": Millikin Decatur Symphony Orchestra
+"StoneX": StoneX Group
+"Hyzon Motors USA": Hyzon Motors
+"Mortgage Guaranty Insurance Corporation": Mortgage Guaranty Insurance
+"Mortgage Guaranty Insurance Company": Mortgage Guaranty Insurance
+"Palantir": Palantir Technologies
+"Findream LLC": Findream
+"FINDREAM": Findream
+"Indeed Inc.": Indeed
+"Marmon Holdings Group": Marmon Holdings
+"NETFLIX": Netflix
+"American Enterprise Group": American International Group
+"EPITEC": Epitec
+"Lucid Holding": Lucid USA
+"Lucid Holdings": Lucid USA
+"Lucid Usa": Lucid USA
+"Lucid": Lucid USA
+"LUCID USA": Lucid USA
+"Harry C Lin CPA A Professional": HARRY C LIN CPA A PROFESSIONAL
+"Hisense": Hisense USA
+"American Express": American Express Company
+"Ziprecruiter": ZipRecruiter
+"GENERAL MILLS": General Mills
+"Infosys Limited": INFOSYS LIMITED
+"Infosys Ltd": INFOSYS LIMITED
+"HKA": HKA Global
+"Inspirit IOT": Inspirit IoT
+"Inspirit IoT Inc.": Inspirit IoT
+"UNIVERSITY OF ILLINOIS AT CHICAGO": University of Illinois at Chicago
+"IHS Markit Ltd": IHS Markit
+"CITRIX SYSTEMS": Citrix Systems Inc.
+"Citrix Systems": Citrix Systems Inc.
+"Citrix": Citrix Systems Inc.
+"Bayer (Monsanto Company)": Bayer Monsanto
+"Bayer (Monsanto)": Bayer Monsanto
+"Kforce": KForce
+"Liberty Mutual Insurance": Liberty Mutual Insurance Company
+"UserTesting Technologies": UserTesting
+"Home Depot USA": Home Depot
+"HOME DEPOT MANAGEMENT COMPANY": Home Depot Management Company
+"DataVisor": Datavisor
+"DATAVISOR": Datavisor
+"DataVisor Inc.": Datavisor
+"Intercontinental Exchange": Intercontinental Exchange Holdings
+"Winit America": WINIT America
+"WinIT America": WINIT America
+"WINIt AMERICA": WINIT America
+"The Climate Corporation": The Climate
+"The climate": The Climate
+"KLiCHS, LLP": KLiCHS
+"Klichs": KLiCHS
+"BROEREN RUSSO BUILDERS": Broeren Russo Builders
+"Broeren Russo Builders, Inc.": Broeren Russo Builders
+"Country Financial Digitalab": COUNTRY Financial Digitalab
+"TIKTOK": Tiktok
+"GE HealthCare Technologies": GE Healthcare
+"GE HealthCare": GE Healthcare
+"Consolidated Trading Company": Consolidated Trading
+"Dish Network": DISH Network
+"Nutanix Inc.": Nutanix
+"GIES College of Business University of Illinois Urbana Champaign": Gies College of Business University of Illinois Urbana Champaign
+"APTIV": Aptiv
+"University of Illinois Urbana Champaign (Gies College of Business)": University of Illinois Urbana Champaign Gies College of Business
+"GlobalFoundries": GLOBALFOUNDRIES
+"Globalfoundries": GLOBALFOUNDRIES
+"Susquehanna international group": Susquehanna International Group
+"Ebco Inc.": Ebco
+"Deloitte Touche Tohmatsu": Deloitte Touche Tohmatsu Limited
+"Bowman Consulting Group, Ltd.": Bowman Consulting Group
+"Bowman Consulting Group Ltd": Bowman Consulting Group
+"Didi Research America LLC": Didi Research America
+"Dropbox, Inc.": Dropbox
+"Thyssenkrupp Crankshaft Company LLC": thyssenkrupp Crankshaft Company
+"ThyssenKrupp Crankshaft Company": thyssenkrupp Crankshaft Company
+"Thyssenkrupp Crankshaft Company": thyssenkrupp Crankshaft Company
+"Tellon Trading Inc.": Tellon Trading
+"JP Morgan and Chase": JP Morgan Chase and Co
+"COLORADO STATE UNIVERSITY": Colorado State University
+"Johnson Controls International": Johnson Controls
+"Johnson Controls, Inc.": Johnson Controls
+"The Dow Chemical company": The Dow Chemical Company
+"Virtusa Corporation": Virtusa
+"Turner Construction": Turner Construction Company
+"Baker Tilly": Baker Tilly US
+"Grant Thornton LLP": Grant Thornton
+"World Wide Technology Holding Co": World Wide Technology
+"Hanwha Q cells USA": Hanwha Q Cells
+"CTC Trading Group, LLC": CTC Trading Group
+"Energy Driven Technologies LLC": Energy Driven Technologies
+"Masswell Development Group": Masswell Development Group Inc.
+"Mississippi State university": Mississippi State University
+"Itlize Global, LLC": Itlize Global
+"Symphony Illinois Orchestra": Illinois Symphony Orchestra
+"Syngenta LLC": Syngenta
+"Lenovo Global Technology": Lenovo
+"CIRRUS LOGIC": Cirrus Logic
+"Fitila Technology": Fitila Technologies
+"Sanofi US": Sanofi US Services
+"Sanofi": Sanofi US Services
+"Bright Mind Enrichment and Schooling": BRIGHT MIND ENRICHMENT AND SCHOOLING
+"Molex LLC": Molex
+"CGG Services US": CGG
+"CGG Services": CGG
+"CGG Services (US)": CGG
+"Clayco, Inc.": Clayco
+"AMERICAN AIRLINES": American Airlines
+"Beckman institute": Beckman Institute
+"Schweitzer Engineering Laboratories, Inc.": Schweitzer Engineering Laboratories
+"Weride": WeRide
+"Honeywell": Honeywell International
+"Balyasny asset management": Balyasny Asset Management
+"Balyasny Asset Management LP": Balyasny Asset Management
+"Axon Enterprise": Axon
+"Axon US": Axon
+"Citadel Securities Americas Services": Citadel Securities
+"Citadel Securities Americas": Citadel Securities
+"MONAD LABS": Monad Labs
+"BLACKROCK FINANCIAL MANAGEMENT": BlackRock Financial Management
+"Enfusion Ltd": Enfusion LTD, LLC
+"Enfusion": Enfusion LTD, LLC
+"Enfusion Systems": Enfusion LTD, LLC
+"MESHARE": meShare
+"MeShare": meShare
+"Information Resources, Inc.": Information Resources
+"Department Of Computer Science University of Illinois at Urbana Champaign": Department of Computer Science University of Illinois at Urbana Champaign
+"SPICY TRIBE": Spicy Tribe
+"Gies College of Business Business Online Programs": Online Programs Gies College of Business
+"Gies Business Online Programs Gies College of Business": Online Programs Gies College of Business
+"NEC Laboratories America, Inc.": NEC Laboratories America
+"Saayam for All": Saayam For All
+"University of Colorado, Boulder": University of Colorado Boulder
+"Yash Solutions": Yash Technologies
+"YASH Technologies": Yash Technologies
+"YASH TECHNOLOGIES": Yash Technologies
+"ESRI": Esri
+"Grubmarket": GrubMarket
+"KGS TECHNOLOGY GROUP": KGS Technology Group
+"Logic Solutions Inc.": Logic Solutions
+"Mediatek USA": MediaTek USA
+"Mediatek": MediaTek USA
+"Pilot Technology": Pilot Technologies
+"ROKMETRO": Rokmetro
+"University Of Illinois at Urbana Champaign": UNIVERSITY OF ILLINOIS AT URBANA CHAMPAIGN
+"University Of Illinois At Urbana Champaign": UNIVERSITY OF ILLINOIS AT URBANA CHAMPAIGN
+"University of Illinois at Urbana champaign": UNIVERSITY OF ILLINOIS AT URBANA CHAMPAIGN
+"Bunge North America": Bunge
+"Bunge Ltd": Bunge
+"Emory university": Emory University
+"WeEducation": WeEducation Group
+"Marketech International": Marketech International USA
+"Harry C. Lin CPA": Harry C Lin CPA
+"HARRY C LIN CPA": Harry C Lin CPA
+"OEC group": OEC Group
+"perfect day": Perfect Day
+"CA Ventures LLC": CA Ventures
+"Gao tek company": GAO Tek
+"solomon cordwell buenz": Solomon Cordwell Buenz
+"University of Michigan, Ann Arbor": University of Michigan Ann Arbor
+"Coursera, Inc.": Coursera
+"Peak6 Group": PEAK6 Group
+"Peak6": PEAK6 Group
+"Vili Tech Company": Vili Tech Co
+"Vili": Vili Tech Co
+"Vili Tech CO": Vili Tech Co
+"GIES College of Business UIUC": Gies College of Business UIUC
+"CG Max Design Corp": CG Max Design
+"Cg Max Design": CG Max Design
+"CG MAX DESIGN": CG Max Design
+"Arecy LLC": Arecy
+"Sinocontech": Sinocontech LLC
+"SINOCONTECH": Sinocontech LLC
+"Milwaukee Electric Tool (Milwaukee Tool)": Milwaukee Electric Tool
+"Cunningham's Children Home": "Cunningham Children's Home"
+"Foxconn Interconnect Technology": Foxconn Interconnect Technology Ltd
+"Xmotorsai": XMotorsai
+"Ratio Architects": RATIO Architects
+"COMMUNITY DREAMS FOUNDATION": Community Dreams Foundation
+"UNIVERSITY OF NORTH CAROLINA AT CHAPEL HILL": University of North Carolina at Chapel Hill
+"BOWA Construction": Bowa Construction
+"GRAEF USA": Graef USA
+"GRAEF": Graef USA
+"LEGO Construction Co": Lego Construction Co
+"Lego Construction Company": Lego Construction Co
+"LEGO Construction Company": Lego Construction Co
+"LEGO CONSTRUCTION COMPANY": Lego Construction Co
+"Skender": Skender Group
+"RND4Impact": RND4IMPACT
+"Lucid motors": Lucid Motors
+"MOYI": Moyi
+"Comed": ComEd
+"GTI energy": GTI Energy
+"SPOTT LUCEY and WALL CPAs": Spott Lucey and Wall CPAs
+"MAXIM INTEGRATED PRODUCTS": Maxim Integrated Products
+"PNJK Partners": PNJK PARTNERS
+"JPMORGAN CHASE BANK NA": JPMorgan Chase Bank
+"JPMORGAN CHASE BANK": JPMorgan Chase Bank
+"Katerra Inc.": Katerra
+"Mueser Rutledge Consulting Engineers PLC": Mueser Rutledge Consulting Engineers
+"JSM MANAGEMENT": JSM Management
+"APC Workforce Solutions II": APC Workforce Solutions II, LLC
+"XCG Design": XCG Design Corp
+"CDH International Accounting Firm": CDH-international accounting firm
+"CDH international accounting firm": CDH-international accounting firm
+"Uptake Technologies Inc.": Uptake Technologies
+"Uptake": Uptake Technologies
+"BOSTON BIOPROCESS": Boston Bioprocess
+"Experian Services": Experian
+"TAOS GLOBAL GROUP": Taos Global Group
+"Changing the Present": Changing The Present
+"DTV INNOVATIONS": DTV Innovations
+"Sarfatty Associates": Sarfatty Associates Ltd
+"SERVEONE": Serveone America
+"serveone": Serveone America
+"SERVEONE AMERICA": Serveone America
+"ServeOne America": Serveone America
+"SmartNews International": SmartNews
+"ADP Technology Services": ADP
+"Super Micro Computer, Inc.": Super Micro Computer
+"PicsArt": Picsart
+"Redwood materials": Redwood Materials
+"Prairie Management and Development": PRAIRIE MANAGEMENT and DEVELOPMENT
+"Trustwave Holdings": Trustwave
+"Advantest": Advantest America
+"Ernst and Young EY": Ernst and Young (EY)
+"PROFESSIONAL DIVERSITY NETWORK": Professional Diversity Network
+"ECKENHOFF SAUNDERS ARCHITECTS": Eckenhoff Saunders Architects
+"Santander Bank": Santander Bank NA
+"Hanyang Technology consulting": Hanyang Technology Consulting
+"Box, Inc.": Box
+"Docusign": DocuSign
+"Silicon Laboratories, Inc.": Silicon Laboratories
+"OKTA": Okta
+"HireIO, Inc.": HireIO
+"INSTAHUB": InstaHub
+"Instahub": InstaHub
+"Cumming Corporation": Cumming Group
+"TOYOTA NORTH AMERICA": Toyota
+"Ocient Inc.": Ocient
+"InsightFinder": Insightfinder
+"Department of Physics University of Illinois at Urbana Champaign": University of Illinois at Urbana Champaign Department of Physics
+"MICHAEL BAKER INTERNATIONAL": Michael Baker International
+"Seagate Technology": Seagate
+"Seagate Technologies": Seagate
+"Xilinx Inc.": Xilinx
+"Headline Services US": Headline
+"Dow Chemical": Dow Chemical Company
+"CSA PARTNERS LTD": CSA Partners Ltd
+"CSA Partners LTD": CSA Partners Ltd
+"Populous": Populous Group
+"DEINDE FINANCIAL": Deinde Financial
+"Gamma Technologies LLC": Gamma Technologies
+"GAMMA USA": Gamma Technologies
+"3D Hologroup": 3D HoloGroup
+"3d hologroup": 3D HoloGroup
+"Virtusense Technologies": VirtuSense Technologies
+"Virtusense technologies": VirtuSense Technologies
+"zscaler": Zscaler
+"CARL R WOESE INSTITUTE FOR GENOMIC BIOLOGY": Carl R Woese Institute for Genomic Biology
+"Oak Ridge Institute for Science and Education ORISE": Oak Ridge Institute for Science and Education (ORISE)
+"GenScript": GenScript USA
+"KMK Consulting Inc.": KMK Consulting
+"Willis Towers Watson": WILLIS TOWERS WATSON US
+"Actalent": Actalent Services
+"Canon Medical Research USA, Inc.": Canon Medical Research USA
+"CANON MEDICAL RESEARCH USA": Canon Medical Research USA
+"University of Illinois (Department of Computer Science)": University of Illinois Department of Computer Science
+'Gies College of Business " Online Programs': Gies College of Business Online Programs
+"Anheuser Busch InBev": Anheuser-Busch InBev
+"Moderna Services": Moderna
+"ALAMAR BIOSCIENCES": Alamar Biosciences
+"Maplebear (DBA Instacart)": Maplebear dba Instacart
+"TRIPADVISOR": TripAdvisor
+"TripAdvisor Inc.": TripAdvisor
+"Tripadvisor": TripAdvisor
+"VISA Research": Visa Research
+"VISA research": Visa Research
+"JD American Technology": JD American Technologies
+"PAXEL CONSULTING": Paxel Consulting
+"CUTLER GROUP": Cutler Group LP
+"Cutler Group": Cutler Group LP
+"MSCI Inc.": MSCI
+"System One Holdings LLC": System One Holdings
+"Natrion Co": Natrion
+"General Electric": General Electric Company
+"GENERAL ELECTRIC COMPANY": General Electric Company
+"LOCHMUELLER GROUP": Lochmueller Group
+"Veriflow": Veriflow Systems
+"Connexin Group": Connexin Group LLC
+"CONNEXIN GROUP": Connexin Group LLC
+"connexin group": Connexin Group LLC
+"Department of Computer Science University of Illinois Urbana Champaign": University of Illinois Urbana Champaign Department of Computer Science
+"Gies College of Business of University of Illinois at Urbana Champaign": University of Illinois at Urbana Champaign Gies College of Business
+"Gies College of Business Business Online Programs department": Business Online Programs Department Gies College of Business
+"MATONEE": Matonee
+"Mutual of Omaha Insurance": MUTUAL OF OMAHA INSURANCE COMPANY
+"Mutual of Omaha Insurance Co": MUTUAL OF OMAHA INSURANCE COMPANY
+"CAMPING WORLD": Camping World
+"Wi tronix": Wi Tronix
+"University of Minnesota Twin Cities": university of minnesota twin cities
+"RBSM LLP": RBSM
+"PPG": PPG Industries
+"Clune Construction": Clune Construction Company
+"Clune Construction Company LP": Clune Construction Company
+"Siemens Medical Solutions": Siemens Medical Solutions USA
+"Baidu USA LLC": Baidu USA
+"Baidu": Baidu USA
+"FEDELE and ASSOCIATES": Fedele and Associates
+"Keybank National Association": KeyBank National Association
+"Optiver US": Optiver Services US
+"Aramco": Aramco Americas
+"Aramco Services Company": Aramco Americas
+"DB Engineering and Consulting": DB Engineering and Consulting USA
+"ENGworks Inc.": ENGWORKS GLOBAL
+"ENGworks": ENGWORKS GLOBAL
+"KeaneTech": Keanetech LLC
+"Keanetech": Keanetech LLC
+"EXLService Holdings": EXLService Holding
+"ExlService": EXLService Holding
+"Groupon, Inc.": Groupon
+"The Nielsen Company US": The Nielsen Company
+"DEVELOPMENT STRATEGIES": Development Strategies
+"Rutgers the State University of New Jersey": Rutgers The State University of New Jersey
+"FUTUREWEI TECHNOLOGIES": Futurewei Technologies
+"Futurewei Technologies, Inc.": Futurewei Technologies
+"Babeltime": BABELTIME
+"ELITE STAFFING": Elite Staffing
+"FIT Electronics Inc.": FIT Electronics
+"W. W. Grainger Inc.": W W Grainger
+"Shipbob Inc.": ShipBob
+"Shipbob": ShipBob
+"Acuty": Acuty LLC
+"Cycle Link (USA)": Cycle Link USA
+"Cycle Link": Cycle Link USA
+"OEC Freight NY OEC Group": OEC Freight (NY)
+"The School of Information Sciences at the University of Illinois at Urbana Champaign": School of Information Sciences at the University of Illinois at Urbana Champaign
+"General Motors Company": General Motors
+"Skidmore Owings and Merrill (SOM)": Skidmore Owings and Merrill SOM
+'Skidmore Owings and Merrill ("SOM")': Skidmore Owings and Merrill SOM
+"Skidmore Owings and Merrill (''SOM'')": Skidmore Owings and Merrill SOM
+"SK Hynix America": SK hynix America
+"Ernst and Young US (EY)": Ernst and Young US EY
+"OAK RIDGE INSTITUTE FOR SCIENCE AND EDUCATION": Oak Ridge Institute for Science and Education
+"AILaw Group": AILaw
+"Apexus Tech": Apexus Technologies
+"COMSCORE": Comscore
+"SAVIYNT": Saviynt
+"SGS": SGS North America
+"Aviatrix": Aviatrix Systems
+"Interactive Brokers group": Interactive Brokers
+"SUMITOMO MITSUI BANKING": Sumitomo Mitsui Banking
+"UNITED AIRLINES": United Airlines
+"mindlance": Mindlance
+"TD Bank NA": TD Bank
+"Td Bank": TD Bank
+"University of Rochester": UNIVERSITY OF ROCHESTER
+"Handshake (Stryder )": Handshake Stryder
+"China Telecom Americas": China Telecom - Americas
+"China Telecom": China Telecom - Americas
+"BAMMONEY": BAMmoney
+"Beaconfire Solution": BeaconFire Solution
+"Global Atlantic Financial Group Limited": Global Atlantic Financial Group
+"Global Atlantic Financial Company": Global Atlantic Financial Group
+"CALIFORNIA ACTUARIAL CONSULTANTS": California Actuarial Consultants
+"Munich Re": Munich Re America Services
+"Institute for genomic biology": Institute for Genomic Biology
+"Dassault Systemes Simulia": Dassault Systemes Simulia Corp.
+"OppLoans": Opploans
+"Contextlogic": ContextLogic Inc.
+"ContextLogic": ContextLogic Inc.
+"Delphi": Delphi Technologies
+"Delphi Corporation": Delphi Technologies
+"ABB": ABB Group
+"BANK SINOPAC": Bank SinoPac Co Ltd
+"CIBC US": CIBC
+"Credit Suisse Services USA": Credit Suisse Services (USA)
+"Credit Suisse": Credit Suisse Services (USA)
+"E2open": e2open
+"Gies college of business at University of Illinois at Urbana Champaign": Gies College of Business at University of Illinois at Urbana Champaign
+"Flexiv Robotics Ltd": Flexiv Robotics
+"LendingClub": LendingClub Corporation
+"BofA Securities": BOFA SECURITIES
+"Nutrien": Nutrien Ag Solutions
+"Nutrien Ltd": Nutrien Ag Solutions
+"ALIBABA GROUP (US)": Alibaba Group (US)
+"Alibaba Group": Alibaba Group (US)
+"OneLink Solution": Onelink Solution
+"BDO USA": BDO
+"CAC Auto Group IL": CAC AUTO GROUP IL
+"Hyperlink": Hyperlink Technologies
+"Bayer CropScience LP": Bayer CropScience
+"BeaconFire": Beaconfire
+"Petronics": Petronics Inc.
+"PETRONICS": Petronics Inc.
+"Vail Systems Inc.": Vail Systems
+"EP Purification, Inc.": EP Purification
+"Citigroup Management": Citigroup Management Corp.
+"Charmworks": Charmworks, Inc.
+"CenturyLink": CenturyLink Inc.
+"Chen Fan Accountancy": "Chen & Fan Accountancy Corp."
+"Neurolux Inc.": NeuroLux
+"Neurolux": NeuroLux
+"TAPFIN": Tapfin
+"Spotify USA Inc.": Spotify USA
+"Kemin Industries, Inc.": Kemin Industries
+"COMPUWARE": Compuware
+"Grubhub": Grubhub Holdings
+"NH Investment and Securities": NH Investment and Securities America
+"University of Illinois Urbana Champaign Department of Astronomy": Department of Astronomy University of Illinois Urbana Champaign
+"The Department of Cell and Developmental Biology The University of Illinois at Urbana Champaign": Department of Cell and Developmental Biology at the University of Illinois at Urbana Champaign
+"Jacobs Solutions": JACOBS
+"Jacobs": JACOBS
+"JACOBS Solutions": JACOBS
+"TSMC Technology": TSMC
+"champaign county public defender's office": "Champaign County Public Defender's Office"
+"Unitarian Universalist Church of Urbana-Champaign": Unitarian Universalist Church of Urbana Champaign
+"AMUDI LAW": Amudi Law
+"Beacon Group": Beacon Industries
+"AiWave Technology": AIwave technology
+"AIwave Technology": AIwave technology
+"Vista Research": Vista Research Services
+"PATH CONSTRUCTION COMPANY": Path Construction
+"Path Construction Company": Path Construction
+"Patrick Engineering Inc.": Patrick Engineering
+"Flextrade Systems": FlexTrade Systems
+"SCHOOL OF INFORMATION SCIENCES UNIVERSITY OF ILLINOIS AT URBANA CHAMPAIGN": School of Information Sciences University of Illinois at Urbana Champaign
+"Tenstorrent": Tenstorrent USA
+"TENSTORRENT USA": Tenstorrent USA
+"Elogistics GA Service": Elogistics (GA) Service
+"ELOGISTICS GA SERVICE": Elogistics (GA) Service
+"OmniVision Technology": OmniVision Technologies
+"OmniVision Technologies, Inc.": OmniVision Technologies
+"Burns and McDonnell Engineering Co": Burns and McDonnell Engineering Company
+"ARISTAI": AristAI
+"Awesung Tech": Awesung
+"Intertek Group Plc": Intertek
+"Enova Financial Holdings, LLC": Enova Financial Holdings
+"Lumen": Lumen Technologies
+"Mega International Commercial Bank Chicago Branch": MEGA INTERNATIONAL COMMERCIAL BANK CHICAGO BRANCH
+"KWS Cereals USA, LLC": KWS Cereals USA
+"NextSource": nextSource
+"NanoGraf": Nanograf
+"Samsung SDI America": Samsung SDI
+"SKENDER CONSTRUCTION": Skender Construction
+"CAC pension": CAC Pension
+"CG UHLENBERG": CG Uhlenberg
+"WILLIAM BLAIR": William Blair
+"MYSENSITIVEDATA (DBA: CONDITION:BLACK TECHNOLOGIES)": "MYSENSITIVEDATA DBA: CONDITION:BLACK TECHNOLOGIES"
+"Edison Energy": EDISON ENERGY
+"KTGY Group": KTGY GROUP
+"Solomon Cordwell Buenz (SCB)": Solomon Cordwell Buenz SCB
+"Zempleo Inc.": Zempleo
+"Arcadis": Arcadis US
+"Cotter Consulting, Inc.": Cotter Consulting
+"Macy's": "Macy's Services"
+"PERI Formwork Systems": Peri Formwork Systems, Inc.
+"Peri Formwork Systems": Peri Formwork Systems, Inc.
+"Wells and Wells Construction Company": Wells and Wells Construction Co
+"Wells and Wells Construction": Wells and Wells Construction Co
+"BLOCKSTREAM": Blockstream USA
+"Blockstream": Blockstream USA
+"INNOPEAK TECHNOLOGY": InnoPeak Technology
+"Navis": Navis LP
+"foxconn industrial internet": Foxconn Industrial Internet
+"Catalytical Company": Catalytical
+"FACEBOOK": facebook
+"Algo Logic Systems": Algo-Logic Systems
+"Bank Of The West": Bank of the West
+"HKS architects": HKS Architects
+"Catalina USA": Catalina
+"Department of Business Administration GIES College of Business": Department of Business Administration Gies College of Business
+"Fluor": Fluor Enterprises
+"GUIDEPOINT GLOBAL": Guidepoint
+"Collabera Inc.": Collabera
+"Novance Co": Novance
+"Illinois Board of Higher Education": Illinois Board Of Higher Education
+"Cigna Corporation": Cigna
+"Grainger International": Grainger International, Inc.
+"Grainger": Grainger International, Inc.
+"TCG Digital Solutions": TCG Digital
+"TCG-Digital": TCG Digital
+"College of Law University of Illinois": University of Illinois College of Law
+"ExxonMobil Corporation": ExxonMobil
+"ECLINICALWORKS": eClinicalWorks
+"ENSARAS": Ensaras
+"Ameritas life insurance": Ameritas Life Insurance
+"KELLER NA": Keller Group
+"Keller North America": Keller Group
+"Aurora Operations": AURORA OPERATIONS
+"TOP TIER LESSONS": Top Tier Lessons
+"Capital Fund Management": Capital Fund Management International
+"Apex Technology Systems": Apex Systems
+"CBRE Group": CBRE
+"Charles Schwab And Co": Charles Schwab and Co
+"Charles Schwab and Company": Charles Schwab and Co
+"HighRadius Corporation": HighRadius
+"Sasken": Sasken Technologies
+"TZG Accounting": TZG Accounting LLC
+"Kerry Inc.": Kerry
+"WONTON FOOD": Wonton Food
+"Activision Blizzard Group": Activision Blizzard
+"CHEK TAN AND COMPANY": Chek Tan and Company
+"CHEK TAN and CO": Chek Tan and Company
+"Horizon Therapeutics plc": Horizon Therapeutics USA
+"Horizon Therapeutics": Horizon Therapeutics USA
+"Industrial and Commercial Bank of China (USA)": Industrial and Commercial Bank of China ltd
+"Industrial and Commercial Bank of China": Industrial and Commercial Bank of China ltd
+"Macias Gini and O'Connell": "MACIAS GINI and O'CONNELL"
+"Score": SCORE
+"ZENBLEN": Zenblen
+"CRRC SIFANG AMERICA": CRRC Sifang America
+"SCALP TRADE": Scalp Trade
+"Icahn school of Medicine at Mount Sinai": Icahn School of Medicine at Mount Sinai
+"Atlink Services": AtLink Services
+"One Energy Enterprises": One Energy
+"Kemper CPA Group": Kemper CPA
+"ZILLION TECHNOLOGIES": Zillion Technologies
+"Hayre Mcelroy and Associates": Hayre McElroy and Associates
+"JMA Civil, Inc.": JMA Civil
+"JPCL Engineering": JPCL ENGINEERING
+"PGH Wong Engineering": PGH WONG ENGINEERING
+"QuiO Technologies LLC": QuiO Technologies
+"Draftkings": DraftKings
+"Ekey Technology Inc.": Ekey Technology
+"EKEY TECHNOLOGY": Ekey Technology
+"hooli homes Champaign": Hooli homes Champaign
+"Infac North America": INFAC North America
+"KBRA": KBRA Holdings
+"Quorn Foods North America": Quorn Foods
+"Fortify Technologies": Fortify
+"Industrie Reply US": Industrie Reply
+"Emerson Electric": Emerson Electric Co
+"Neutron": Neutron Holdings
+"ADE Consulting (Company)": ADE Consulting
+"Citi Credit Services": Citi Credit Services (USA)
+"Citi Credit Services USA": Citi Credit Services (USA)
+"YES ENERGY": Yes Energy
+"SANY America": Sany America
+"Adecco USA": Adecco
+"Altomni Corp": Altomni
+"The Marketing Store LP": The Marketing Store
+"SC-B Consulting, Inc.": SC B Consulting
+"RetailMeNot Inc.": RetailMeNot
+"Truqua Enterprises": Truqua Enterprises LLC
+"TruQua Enterprises": Truqua Enterprises LLC
+"Bono Consulting": Bono Consulting Inc.
+"DataCubes Inc.": Datacubes
+"DataCubes": Datacubes
+"Barclays Service": Barclays Service Corp
+"Forkaia": FORKaiA
+"FORKAIA": FORKaiA
+"PIPER AIRCRAFT": Piper Aircraft
+"tekinvaderz": TekInvaderz
+"CTL Engineering": CTL ENGINEERING
+"ITC INFOTECH": ITC INFOTECH USA
+"Kuvare Insurance Services": Kuvare Insurance Services LP
+"Cerner Corporation": Cerner
+"Washington University School of Medicine in St Louis": Washington University in St Louis School of Medicine
+"UIUC School of Information Sciences": School of Information Sciences UIUC
+"University of Illinois at Urbana Champaign Department of Computer Science": Department of Computer Science (at University of Illinois at Urbana Champaign)
+"Department of Statistics at University of Illinois Urbana Champaign": University of Illinois at Urbana Champaign Department of Statistics
+"Focus Core Inc.": Focus Core
+"Honda Research Institute": Honda Research Institute USA
+"AMD Xilinx": AMD Xilinx USA
+"AMD XILINX": AMD Xilinx USA
+"Aon Consulting (NJ)": Aon Consulting NJ
+"Kuvare US Holdings": Kuvare US holdings
+"Kuvare": Kuvare US holdings
+"INNOVHOPE": InnovHope
+"PIC North America": PIC USA
+"SACO Enterprises dba Pactech": SACO Enterprises DBA Pactech
+"SACO Enterprises (dba Pactech)": SACO Enterprises DBA Pactech
+"Craig O'Connell Architecture": "Craig O' Connell Architecture"
+"AIR Worldwide Corporation": AIR Worldwide
+"Dassault Systemes": Dassault Systemes Americas
+"CustomerInsightsAI": CustomerInsightsai
+"EBIN NEW YORK": EBIN New York
+"Ebin New York": EBIN New York
+"Qualtrics, LLC": Qualtrics
+"Tolead Logistics DFW": TOLEAD LOGISTICS DFW
+"Whole Foods Market Services": Whole Foods Market
+"ML Group Design and Development": ML GROUP DESIGN AND DEVELOPMENT
+"PCL Construction Services": PCL Construction
+"BECTRAN": Bectran
+"Center For Vein Restoration": Center for Vein Restoration
+"Ipserlab": IpserLab
+"NCS Pearson": NCS PEARSON
+"RICOH USA": Ricoh USA
+"Grainger College of Engineering University Of Illinois Urbana Champaign": Grainger College of Engineering University of Illinois Urbana Champaign
+"Tata Elxsi Limited": TATA ELXSI
+"TATA ELXSI LIMITED": TATA ELXSI
+"Tata Elxsi LTD": TATA ELXSI
+"Texas A and M Agrilife Research": Texas A and M AgriLife Research
+"Business Management Advisory": BUSINESS MANAGEMENT ADVISORY
+"Pitchbook Data": PitchBook Data
+"HENGLI AMERICA": Hengli America
+"Kiss Products": KISS Products
+"Kiss products": KISS Products
+"CALFEE HALTER and GRISWOLD": Calfee Halter and Griswold
+"CAINIAO SUPPLY CHAIN US": Cainiao Supply Chain US
+"Mega International Commercial Bank": Mega International Commercial Bank Co Ltd
+"MEGA INTERNATIONAL COMMERCIAL BANK": Mega International Commercial Bank Co Ltd
+"Wondfo USA": WONDFO USA CO LTD
+"Triad National Security (at Los Alamos National Laboratory)": Triad National Security at Los Alamos National Laboratory
+"TrexQuant Investment LP": Trexquant Investment LP
+"Shining star music academy": Shining Star Music Academy
+"ActionTec Electronics": Actiontec Electronics
+"VVDN TECHNOLOGIES": VVDN Technologies
+"Shambaugh and Son LP": Shambaugh and Son
+"Compnova": CompNova
+"Alliance for Sustainable Energy (NREL)": Alliance for Sustainable Energy NREL
+"Mediterranean Shipping Company USA": Mediterranean Shipping Company
+"Tringapps": TRINGAPPS
+"Homeland Mortgage Company": HOMELAND MORTGAGE COMPANY
+"OSIsoft Inc.": OSIsoft
+"Bloomreach": BloomReach
+"AK architecture": Ak Architecture
+"Optima Inc.": Optima
+"PDI design group LTD": PDI Design Group LTD
+"Clara Foods": Clara Foods Co
+"Shirley Ryan Abilitylab": Shirley Ryan AbilityLab
+"Blinderman Construction": Blinderman Construction Co
+"Kiewit Energy Group": KIEWIT ENERGY GROUP
+"Pocket Gems, Inc.": Pocket Gems
+"Inter American Development Bank": Inter-American Development Bank
+"Inter american development bank": Inter-American Development Bank
+"The International Council on Clean Transportation": THE INTERNATIONAL COUNCIL ON CLEAN TRANSPORTATION
+"TMF Group": TMF USA
+"University of Illinois Urbana Chamapign": University of illinois Urbana Chamapign
+"ClinPharma Clinical Research": Clinpharma Clinical Research
+"Aplus Staffing Agency": Aplus staffing agency
+"VALLEY FINE FOODS COMPANY": Valley Fine Foods Company, Inc.
+"Valley Fine Foods Company": Valley Fine Foods Company, Inc.
+"ASPIRE PATHWAY": ASPIRE Pathway
+"IRi": IRI
+"DuPont Company": DuPont
+"International Recruiting LTD": International Recruiting
+"Fidelity Accounting Tax Service": "Fidelity Accounting & Tax Service"
+"LT MANAGEMENT GROUP": LT Management Group
+"MENTOR GRAPHICS": Mentor Graphics
+"Wave Computing, Inc.": Wave Computing
+"Fresenius Kabi USA": FRESENIUS KABI USA
+"Pactera Technology International Ltd": Pactera Technologies NA
+"Muller and Muller Ltd": Muller and Muller ltd
+"RATIO Design": Ratio Design
+"RATIO DESIGN": Ratio Design
+"Marsh": Marsh USA
+"STEPHENS FAMILY YMCA": Stephens Family YMCA
+"Bayer Crop Science LP": Bayer Crop Science
+"Amadeus North America": Amadeus
+"Tech Mahindra Americas": Tech Mahindra (Americas)
+"Mckinney": McKinney
+"PNC BANK": PNC Bank
+"PNC Bank NA": PNC Bank
+"Matlen Silver Group": Matlen Silver
+"Citibank NA (CBNA)": Citibank NA CBNA
+"COGENT Infotech": Cogent InfoTech
+"VAI BUSINESS SOLUTION": VAI Business Solution
+"Personify Inc.": Personify
+"Square, Inc.": Square
+"Jcube Technology": Jcube Technology LLC
+"JBS SWIFT AND COMPANY": JBS Swift And Company
+"Sunlight Solar Cell Design and Encapsulation, LLC": Sunlight solar cell design and encapsulation
+"Panda Restaurant Group, Inc.": Panda Restaurant Group
+"L and T Technology Services Limited": L and T Technology Services
+"Spigen Inc.": Spigen
+"Omniscience Corporation": Omniscience
+"Hanchett Entry Systems an Assa Abloy Company": Hanchett Entry Systems an Assa Abloy company
+"Ibase of Fairfield county 'dba' Qualitest": Ibase of Fairfield County dba Qualitest
+"Xaptum Inc.": Xaptum
+"Biosecumax": BIOSECUMAX
+"Office of Relations University of Illinois Urbana Champaign": University of Illinois Urbana Champaign Office of Relations
+"University of Illinois at Urbana Champaign Department of Mechanical Science and Engineering": Department of Mechanical Science and Engineering at University of Illinois Urbana Champaign
+"Gies College of Business Innovation and Disruption": Gies College of Business Disruption and Innovation
+"Walmart Global eCommerce": Walmart Walmart Global eCommerce
+"Eurofins Lancaster Laboratories Scientific Professional Services": Eurofins Lancaster Laboratories Professional Scientific Services
+"Midea": Midea America
+"WAVE LIFE SCIENCES USA": Wave Life Sciences
+"DEKA RESEARCH and DEVELOPMENT": Deka Research and Development
+"Keysight Technologies": Keysight
+"Credico USA": Credico (USA)
+"A ROUND ENTERTAINMENT": A Round Entertainment
+"COAST": Coast
+"Hayman WoodWard": Hayman Woodward
+"Swift Stace": SWIFT STACE
+"Gulf Wind Technology": Gulf wind technology
+"AZURE Institute": Azure Institute
+"IDG ARCHITECTS": IDG Architects
+"Cordel Technology": Cordel
+"GENERAL ELECTRIC COMPANY (GE RESEARCH)": GENERAL ELECTRIC COMPANY GE RESEARCH
+"General Electric Company (GE Research)": GENERAL ELECTRIC COMPANY GE RESEARCH
+"SMITH": Smith International
+"Axiscades": AXISCADES
+"AxisCades": AXISCADES
+"DigitBridge": Digitbridge
+"Geico": GEICO
+"IntraEdge Technology": IntraEdge
+"Pyramid Systems": Pyramid
+"TOYOTA RESEARCH INSTITUTE": Toyota Research Institute
+"University Of Illinois": UNIVERSITY OF ILLINOIS
+"MINO Automation USA": Mino Automation USA
+"Open Systems": Open Systems International
+"Open Systems, Inc.": Open Systems International
+"A Work of Faith Ministries (AWOF)": A Work of Faith Ministries AWOF
+"AtSquareOne": AtSquareone
+"Fuyao Glass Illinois, Inc.": Fuyao Glass Illinois
+"XYLO CONSULTING": Xylo Consulting
+"Jun Zhou Insurance Agency": JUN ZHOU INSURANCE AGENCY
+"SKY AUTO GROUP": Sky Auto Group
+"ExxonMobil Technology and Engineering": ExxonMobil Technology and Engineering Company
+"TTX Company": TTX
+"PROSPERO SOFT": Prospero Soft
+"Redmane Technology": RedMane Technology
+"Silk Software": Silk software
+"Sun Life Financial (US) Services Company": Sun Life Financial US Services Company
+"VEDAINFO": Vedainfo
+"New World Market dba Fresh International Market": New World Market Dba Fresh International Market
+"the Carle Foundation": The Carle Foundation
+"UnknotID": Unknotid
+"Sinfonia Da Camera": Sinfonia da Camera
+"Meta platforms": META PLATFORMS
+"TOPTICA Photonics": Toptica Photonics
+"METROPOLITAN AREA PLANNING COUNCIL": Metropolitan Area Planning Council
+"Alliance North America": Alliance Group Technologies
+"Redpath and Company LTD": Redpath and Company
+"The Dako Group": The DAKO Group
+"Friendwell Management": FriendWell management Group
+"HTC": HTC Global Services
+"NOMURA SECURITIES INTERNATIONAL": Nomura Securities International
+"Swoon": Swoon Group
+"Innover Global": INNOVER GLOBAL
+"One and One": ONE AND ONE
+"Strategic global sourcing": Strategic Global Sourcing
+"Neutral Cycle Supply Company": Neutral Cycle Supply
+"PRGX USA": PRGX
+"Threatconnect": ThreatConnect
+"Farmers Business Network Inc.": Farmers Business Network
+"FGP Atelier": FGP ATELIER INTERNATIONAL
+"HANDEL ARCHITECTS": Handel Architects
+"KAHLER SLATER": Kahler Slater
+"Pacific Ethanol": Pacific ethanol
+"AES": AES Services
+"CA Residential": CA Residential, LLC
+"M A MORTENSON COMPANY": M A Mortenson Company
+"NationalGrid": NationalGrid USA
+"CCC information Services": CCC Information Systems
+"Ai Software": AI SOFTWARE
+"Ascent Services Group": Ascent Technologies
+"HAVI Global Solutions": HAVI GLOBAL SOLUTIONS
+"LG CNS": LG CNS America
+"XEN Infotech": Xen Infotech
+"American Halal Company": American Halal Company, Inc.
+"ACCENTURE": Accenture
+"TEKsystems Global Services": Teksystems Global Services LLC
+"Western Union": WESTERN UNION
+"KBKG": KBKG Inc.
+"New Mozart school of Music": New Mozart School of Music
+"Inspur USA Inc.": Inspur USA
+"PASSAGE GLOBAL CAPITAL MANAGEMENT": Passage Global Capital Management
+"Young Basile Hanlon and Macfarlane PC": Young Basile Hanlon and MacFarlane PC
+"ESI Consultants Ltd": ESI Consultants
+"NWS Architects": NWS ARCHITECTS
+"SUNSTELLA Technology": Sunstella Technology
+"Urban Leaf CO DBA The Produce Company": Urban Leaf Co DBA The Produce Company
+"Neuberger Berman Group": Neuberger Berman
+"APROJECT FACTORY": Aproject Factory
+"Q PACIFIC MANUFACTURING": Q Pacific Manufacturing
+"Panasonic": Panasonic North America
+"BUNGE Management Services": Bunge Management Services
+"United States District Court for The Northern District of Illinois": United States District Court for the Northern District of Illinois
+"Actnano": actnano
+"NEP electronics": NEP Electronics
+"Tabore Info Tech Taborit": "Tabore Info Tech ('Taborit')"
+"The Ayco Company LP a Goldman Sachs Company": THE AYCO COMPANY LP A GOLDMAN SACHS COMPANY
+"HNA Group North America LLC": HNA Group North America
+"Abroad Intellect Capital": Abroad Intellect Capital Inc.
+"Blue Water Builders": Blue Water Builders, Inc.
+"Parsons": Parsons Corporation
+"EASI": EASi
+"Divisa Capital US": Divisa Capital
+"Han Feng": Han Feng Inc.
+"Koning": Koning Corporation
+"Cloudera": Cloudera, Inc.
+"Advanced Technologies Group": Advanced Technology Services Inc.
+"Anjaneyap": Anjaneyap Global
+"Illinois Rocstar": Illinois Rocstar LLC
+"INNOVA SOLUTIONS": Innova Solutions
+"UMIUNI": UmiUni
+"Aurora Specialty Textiles Group, Inc.": Aurora Specialty Textiles Group
+"Oh Pharmaceutical Co Ltd": OH Pharmaceutical Co Ltd
+"Focus Development Inc.": Focus Development
+"ASANA": Asana
+"NCR Corporation": NCR
+"Mission Produce, Inc.": Mission Produce
+"Sparx Biopharmaceutical": SparX Biopharmaceutical
+"Capital Forensics": Capital Forensics, Inc.
+"First Citizens Bank and Trust Co": First Citizens Bank Trust and Co
+"Beta Technologies": Beta Beta Company Limited
+"Department of Physics University of Illinois": Physics Department University of Illinois
+"University of Illinois Department of Physics": Physics Department University of Illinois
+"Law Huang International Ltd": Huang Law Group
+"University of Illinois Department of Crop Sciences": Department of Crop Sciences University of Illinois
+"University of Illinois at Urbana Champaign The Career Center": The Career Center University of Illinois at Urbana Champaign
+"Korean Church of Urbana Champaign": Korean Church of Champaign Urbana
+"City of Chicago Law Department": City of Chicago Department of Law
+"BirlaSoft": Birlasoft
+"HireBeat": Hirebeat
+"Stability AI Ltd": Stability AI
+"Volt Management Corp.": Volt Management
+"AynaAi": AynaAI
+"Sherwin-Williams Company": Sherwin Williams
+"Airslate": airSlate
+"IVY CREST ATTORNEYS": Ivy Crest Attorneys
+"LAYO FAWOLE LAW P": Layo Fawole Law P
+"BOULDER ASSOCIATES ARCHITECTS": Boulder Associates Architects
+"Design Architecture Urbanism (DAU Concept)": Design Architecture Urbanism DAU Concept
+"Yamasaki": YAMASAKI
+"ROCHE": Roche
+"PONYAI": Ponyai
+"Gofo": GOFO
+"Lonza Walkersville": LONZA WALKERSVILLE
+"Rebecca Everlene Trust Company": REBECCA EVERLENE TRUST COMPANY
+"YANWEN EXPRESS": Yanwen Express
+"DBM Vircon Services (USA)": DBM Vircon Services USA
+"MacDonald Miller Facility solutions": MacDonald Miller Facility Solutions
+"Schaefer": SCHAEFER
+"Dreamstudio": DreamStudio
+"Motorq": MOTORQ
+"Data Science Research Services Gies college of Business": Data Science Research Services Gies College of Business
+"Dayforce US": Dayforce
+"Infovision": InfoVision
+"Inspyr Solutions": INSPYR Solutions
+"Pactiv": PACTIV
+"Serefina": SEREFINA
+"DJI": DJI Technology
+"Faith accounting service": Faith Accounting Service
+"HCLTech America": HCLTech
+"Icekredit": IceKredit
+"Delta Electronics USA": Delta Electronics
+"EPAM SYSTEMS": EPAM Systems
+"Visteon Corporation": Visteon
+"Bank of China (New York Branch)": Bank of China New York Branch
+"Cosmax Nbt USA": Cosmax NBT USA
+"Audible (Amazon subsidiary)": Audible Amazon subsidiary
+"INFI USA": INFI
+"Services On site": SERVICES ON SITE
+"HD Hyundai Power Transformers USA": HD HYUNDAI POWER TRANSFORMERS USA
+"Indimet": INDIMET
+"MGA RESEARCH": MGA Research
+"Perfect Reach LAW CENTER": Perfect Reach Law Center
+"designONE studio": designONE Studio
+"IZ Design Studio": IZ design studio
+"VST Consulting": VST CONSULTING
+"H W Lochner": H.W. Lochner
+"Infrastructure Engineering": Infrastructure Engineering Inc.
+"Farmers Insurance Group": Farmers Insurance
+"Optimal CAE Inc.": Optimal CAE
+"ADI Worldlink": Adi Worldlink
+"XRcloudnet": XRCloudnet
+"BankUnited NA": BankUnited
+"CHA FOR TEA": Cha For Tea
+"Chameleon Communications International": Chameleon Communications
+"Hunt Capital Partners": Hunt Capital Partners, LLC
+"Nan Ya Plastics America": Nan Ya Plastics Corporation, America
+"Cafari": Cafari Inc.
+"CU CitizenAccessorg ( Journalism Department Newsroom at the University of Illinois)": CU CitizenAccessorg Journalism Department Newsroom at the University of Illinois
+"Data Inc.": Data
+"HAWAII INTEGRATED ANALYTICS": Hawaii Integrated Analytics
+"Ryder Truck Rental": Ryder truck rental
+"SPECTRUM LABS": Spectrum Labs
+"Cushman and Wakefield": Cushman and Wakefield US
+"Diamond Foods Holdings": Diamond foods holdings
+"H and C Food": H and C FOOD
+"Thermo Fisher Scientific (Invitrogen Holdings )": Thermo Fisher Scientific Invitrogen Holdings
+"TMEIC INTERNATIONAL": TMEIC
+"Impro Industries USA": Impro Industries USA Inc.
+"Intergraph": Intergraph Corporation
+"Citi Credit Service USA": Citi Credit Service
+"CLECO Holdings": Cleco Holdings
+"CreditSpectrum": CreditSpectrum Corp.
+"Itarle USA": Itarle (USA)
+"On Deck Capital": On Deck Capital, Inc.
+"Panda Analytics": Panda Analytics, Inc.
+"The Options Clearing": The Options Clearing Corporation
+"DWA Healthcare Communications Group": DWA Healthcare Communications
+"Pharmaceutical Product Development, LLC.": Pharmaceutical Product Development
+"RC Fields and Associates": RC FIELDS and ASSOCIATES
+"United Integrated Services(USA)": United Integrated Services USA
+"FUJITSU RESEARCH OF AMERICA": Fujitsu Research of America
+"Meta (Facebook)": Meta(Facebook)
+"GoPuff": Gopuff
+"HYC (USA)": HYC USA
+"Mu Sigma Inc.": Mu Sigma
+"Advantech": Advantech USA
+"physIQ": PhysIQ
+"planbook": Planbook
+"HDR ARCHITECTURE": HDR Architecture
+"Onsemi": onsemi
+"Intel (Oregon)": Intel Oregon
+"Fk Rudnick and Company": FK RUDNICK and COMPANY
+"InvenTrust Properties": INVENTRUST PROPERTIES
+"Partners Group": Partners Group (USA)
+"Complete Genomics": Complete Genomics, Inc.
+"Mobosense": Mobosense LLC
+"MOBOSENSE": Mobosense LLC
+"Premex": Premex Inc.
+"Ameren Services": Ameren
+"Prenosis": Prenosis, Inc.
+"BSASPEC Inc.": BSASPEC
+"Acomb Ostendorf and Associates LLC": Acomb Ostendorf and Associates
+"Applied Research Associates, Inc.": Applied Research Associates
+"Shaw Lundquist Associates": Shaw-Lundquist Associates Inc.
+"The Consulting Engineers Group": The Consulting Engineers Group Inc.
+"Celect Inc.": Celect
+"Allsource PPS": AllSource PPS
+"Affine": Affine Inc.
+"CEB Inc.": CEB
+"DAEDONG USA": DAEDONG - USA, Inc.
+"Tango Management Consulting": Tango Management Consulting Inc.
+"Teklink International": Teklink International Inc.
+"TekLink International": Teklink International Inc.
+"Tekmill": TekMill
+"Bellwether Analytics LLC": Bellwether Analytics
+"Aidble": Aidble Inc.
+"Nest Seekers": Nest Seekers International
+"Cloudparticle": CloudParticle
+"Cymer LLC": Cymer
+"InVentiv Health": inVentiv Health
+"Readerlink Distribution Services": Readerlink Distribution Services, LLC
+"Planet Labs": Planet Labs Inc.
+"21zephyr": 21Zephyr Inc.
+"21Zephyr": 21Zephyr Inc.
+"X development": X Development
+"CNH Industrial": CNH Industrial America LLC
+"CNH Industrial America": CNH Industrial America LLC
+"Sigma Aldrich Manufacturing": Sigma-Aldrich Manufacturing LLC
+"wound care solutions": wound care solutions Inc.
+"Leidos Holdings": Leidos
+"MIDWEST CONSULTANTS GROUP": Midwest Consultants Group
+"FLUXTEK SOLUTIONS": Fluxtek Solutions
+"Innovo research": Innovo Research
+"BILL ME LATER A PAYPAL COMPANY": BILL ME LATER (A PAYPAL COMPANY)
+"Ahead": AHEAD
+"Opendoor Labs": OpenDoor Labs
+"Vdart": VDart
+"Lifesafety Power": LifeSafety Power
+"AIG EMPLOYEE SERVICES": AIG Employee Services
+"ClairVista": CLAIRVISTA
+"Noble House Home Furnishings": NOBLE HOUSE HOME FURNISHINGS
+"Kashiv Biosciences": Kashiv BioSciences
+"Validate Health, LLC": Validate Health
+"iGon Technologies, Inc.": iGon Technologies
+"EPIC Systems": Epic Systems
+"NOUSLOGIC HEALTHCARE Inc.": NOUSLOGIC HEALTHCARE
+"xCelor LLC": xCelor
+"RiskSpan Inc.": RiskSpan
+"Pantos USA, Inc.": Pantos USA
+"BAO DEAL": BAO DEAL Inc.
+"Bao Deal": BAO DEAL Inc.
+"Korea Trade Investment Promotion Agency": Korea Trade-Investment Promotion Agency
+"Signal Digital": Signal Digital Inc.
+"Multi fineline Electronix": Multi Fineline Electronix
+"BMO Contract under Apex Systems": BMO (Contract under Apex Systems)
+"University of Illinois Urbana Champaign Department of Mechanical Science and Engineering": Department of Mechanical Science and Engineering University of Illinois Urbana Champaign
+"Mechanical Science and Engineering Department University Of Illinois Urbana Champaign": Department of Mechanical Science and Engineering University of Illinois Urbana Champaign
+"University of Illinois Urbana Champaign Gies Business School": Gies School of Business University of Illinois Urbana Champaign
+"Dexian DISYS Digital Intelligence Systems dba Dexian DISYS": Digital Intelligence Systems DBA Dexian DISYS
+"University of Pittsburgh Department of Civil and Environmental Engineering": Department of Civil and Environmental Engineering University of Pittsburgh
+"Department of Animal Sciences University of Illinois at Urbana Champaign": University of Illinois at Urbana Champaign Department of Animal Sciences
+"University of Michigan Michigan Medicine": Michigan Medicine University of Michigan
+"Excel IT": IT Excel
+"Gies College of Business at UIUC Business Online Programs department": Business Online Programs department Gies College of Business at UIUC
+"University of Illinois at Urbana Champaign Dept of Linguistics and Dept of Educational Psychology": Dept of Linguistics and Dept of Educational Psychology University of Illinois at Urbana Champaign
+"Applied Material Solutions": Applied Material
+"Document Crunch": DOCUMENT CRUNCH
+"K1x": K1X
+"United Imaging Intelligence": United Imaging Intelligence America
+"Synchrony (the company)": Synchrony (the Company)
+"Skild AI": SKILD AI
+"HALLIBURTON ENERGY SERVICES": Halliburton Energy Services
+"ICON Vendorpass": ICON VENDORPASS
+"Magna Services": Magna Technology Group
+"JPRA Architects Ltd": JPRA Architects
+"United Imaging Healthcare North America": United Imaging Healthcare America
+"Datadelivers": DataDelivers
+"fundae Software": Fundae Software
+"Pyramid Consulting": Pyramid Consulting International
+"THE HOME DEPOT": The Home Depot
+"Eddyfi (Eddyfi Technologies)": Eddyfi Eddyfi Technologies
+"United Integrated Service (USA)": United Integrated Service USA
+"Annapurna Labs US": Annapurna Labs
+"Annapurna Labs (US)": Annapurna Labs
+"PALO": Palo
+"TekAssembly": tekAssembly
+"xAI": XAI
+"DynamoFL": DYNAMOFL
+"World Energy Innovations WEI": World Energy Innovations (WEI)
+"Cloud Data DBA Cloud Talend": Cloud Data (DBA Cloud Talend)
+"Ensemble foods North America": Ensemble Foods North America
+"TheoremLabs Partners": Theoremlabs Partners
+"Tricopp DBA CloudPaths": Tricopp dba CloudPaths
+"Epsilon Technologies Group": Epsilon
+"Finovax Technologies": FINOVAX
+"Pareto": PARETO
+"Unity For Equality": Unity for Equality
+"HEADWAY TECHNOLOGIES": Headway Technologies
+"AMD (Advanced Micro Devices)": AMD Advanced Micro Devices
+"Best Buy Co": Best Buy
+"University for Advanced Internet Development dba Internet2": University for Advanced Internet Development (dba Internet2)
+"Wells Fargo Bank": Wells Fargo Bank NA
+"RCM TECHNOLOGY GROUP": RCM Technologies
+"Johnson and Johnson": Johnson and Johnson Services
+"Fehr and Peers": FEHR and PEERS
+"LIVEX AI": LiveX AI
+"Sakura MedTech": Sakura Medtech
+"Sabic": SABIC
+"ViaSat": Viasat
+"HYUNDAI AMERICA": Hyundai America
+"Stryder (dba Handshake)": Stryder dba Handshake
+"Marvell": Marvell Technology
+"The Animal Cause": The animal Cause
+"Archerstone": ArcherStone
+"Korean Jesus-Love United Methodist Church": Korean Jesus Love United Methodist Church
+"Munich Reinsurance America": Munich Reinsurance America, Inc.
+"Bailey Edward Design": BAILEY EDWARD DESIGN
+"George M Rogers Architect (GMRA)": George M Rogers Architect GMRA
+"Wimberly Allison Tong Goo WATG": Wimberly Allison Tong Goo (WATG)
+"Sub4 Development Company": Sub4 Development
+"MULTICOREWARE": Multicoreware
+"Trinity College": TRINITY COLLEGE
+"EMC US OPERA HOPK (Dell Technologies)": EMC US OPERA HOPK Dell Technologies
+"AARP at Tech Nest (contracted by Modis)": AARP at Tech Nest contracted by Modis
+"Leetcode": LeetCode
+"Sunvalley Solar Technology": Sunvalley Solar Tech
+"Hooli Home": hooli home USA
+"RMDS LAB": RMDS Lab
+"Verily Life Sciences LLC": Verily life sciences
+"MJS ENTERPRISES": MJS Enterprises
+"Chalmers St consulting": Chalmers St Consulting
+"Conexiom": Conexiom US
+"TECHBYTE CONSULTING": Techbyte Consulting
+"California Department of Tax and Fee Administration (OHA Chicago)": California Department of Tax and Fee Administration OHA Chicago
+"FEENEY BROTHERS EXCAVATION": Feeney Brothers Excavation
+"Randstad Professionals": Randstad Professionals US
+"Intelinair": IntelinAir
+"Brigham and Women's Hospital (BWH)": "Brigham and Women's Hospital BWH"
+"BOOTH HANSEN": Booth Hansen Ltd
+"Peckham Guyton Albers and Viets": peckham guyton albers and viets
+"UT Battelle Oak Ridge National Laboratory": UT Battelle (Oak Ridge National Laboratory)
+"DIVERSANT": Diversant
+"Bytedance (TikTok)": ByteDance TikTok
+"TIBCO Software": Tibco Software
+"Applied Research Associates ARA": Applied Research Associates (ARA)
+"TMG consulting": TMG Consulting
+"Crux Jinx Productions": Crux Jinx Productions, LLC
+"Gulfstream Aerospace": Gulfstream Aerospace Corporation
+"MountainView Financial Solutions": MountainView Financial Solutions, LLC
+"QY Research Inc.": QY Research
+"STEPHEN TILLY Architect": Stephen Tilly Architect
+"Livzon Mabpharm USA": Livzon Mabpharm USA, Inc.
+"Sloan Kettering Institute for Cancer Research": Sloan-Kettering Institute for Cancer Research
+"US MED EQUIP": US MED EQUIP Inc.
+"Burlington Civil": Burlington Civil Inc.
+"McCarthy Building Companies": McCarthy Building Companies, Inc.
+"StudioGC": StudioGC, Inc.
+"Fitbit Inc.": Fitbit
+"MModal": MModal Services LTD
+"ZeroStack": ZeroStack, Inc.
+"CASK DATA": Cask Data
+"COFCO Capital": COFCO Capital Corporation
+"WeSpline Inc.": WeSpline
+"Graphet": Graphet Inc.
+"Integra Technologies LLC": Integra Technologies
+"BORDERX LAB": BORDERX LAB Inc.
+"Inalfa Roof Systems, Inc.": Inalfa Roof Systems
+"Kajeet": Kajeet, Inc.
+"Sanford Adult Day Care Management": Sanford Adult Day Care Management, Inc.
+"Solomon Page Group": Solomon Page Group LLC
+"Sun Buckets, Inc.": Sun Buckets
+"MA Engineering Consultants": MA Engineering Consultants, Inc.
+"Magnus Technology Solutions": Magnus Technology Solutions Inc.
+"Realmart Realty": Realmart Realty LLC
+"UNITED NATIONS": United Nations
+"Global IT Experts": Global IT Experts, Inc.
+"MetroNet": MetroNet Inc.
+"Axiom Technology Group": Axiom Global
+"HEAVNER BEYERS and MIHLAR": Heavner Beyers and Mihlar
+"DataScience": DataScience Inc.
+"Async Computing": Async Computing LLC
+"CRRC MA": CRRC MA Corporation
+"Lambdanets": Lambdanets Inc.
+"Cooper Tire and Rubber Company": Cooper Tire and Rubber Co
+"Hanweck Associates": Hanweck Associates, LLC
+"M CAM International": M CAM International LLC
+"Phynance Capital Management": Phynance Capital Management, LLC
+"Platinum Rapid Funding Group Ltd": Platinum Rapid Funding Group, Ltd.
+"REFLEXIS SYSTEMS": Reflexis Systems Inc.
+"Security Benefit": Security Benefit Corporation
+"Inspira": Inspira, Inc.
+"ZJ Future US": ZJ Future
+"Soothsayer Analytics": Soothsayer Analytics LLC
+"RWS Entertainment": RWS Entertainment Group
+"PSI Technologies": PSI Systems
+"2IM Group": 2IM GROUP
+"ChainScale": CHAINSCALE
+"XSenseai": Xsenseai
+"Kriven research group": KRIVEN RESEARCH GROUP
+"Archer Daniels Midland Company ADM": Archer Daniels Midland Company (ADM)
+"Raizen North America": Raizen North America, Inc.
+"Acuity Brands Lighting": Acuity brands lighting
+"DUAL NA": DUAL North America
+"University of Illinois ISPP Department of Innovation and Technology": University of Illinois (ISPP Department of Innovation and Technology)
+"HS Ad America (GIIR America)": HS Ad America GIIR America
+"MADISON CAPITAL FUNDING": Madison Capital Funding
+"PCE Paragon Solutions USA (Foxconn)": PCE Paragon Solutions USA Foxconn
+"St. Rose Hospital": ST ROSE HOSPITAL
+"Preveil": PreVeil
+"Stigma Holdings": Stigma
+"STIGMA Holdings": Stigma
+"SQUIRREL TECHNOLOGIES Inc.": SQUIRREL TECHNOLOGIES
+"THE SILVERBERG ACADEMY LLC": THE SILVERBERG ACADEMY
+"The Silverberg Academy": THE SILVERBERG ACADEMY
+"phData,Inc": phData
+"Airwatch": AirWatch
+"Vineti, Inc.": Vineti
+"Jetro Holdings, LLC": Jetro Holdings
+"Sente Advisory Services, Inc.": Sente Advisory Services
+"AIG Technologies": AIG
+"Liebherr Gear Technology Inc.": Liebherr Gear Technology
+"Chihuo.Inc": Chihuo
+"Landauer": Landauer, Inc.
+"Unify Systems Inc.": Unify Systems
+"Environmental Monitoring and Technologies": Environmental Monitoring and Technologies, Inc.
+"Social Market Analytics": Social Market Analytics, Inc.
+"McMAHON Associates": McMahon Associates
+"Braintree (PayPal)": Braintree Paypal
+"Rally Health": Rally Health, Inc.
+"hooli home Champaign": Hooli home Champaign
+"Hooli Home Champaign": Hooli home Champaign
+"TD Securities": TD Securities (USA)
+"Apex Fintech Services": Apex Fintech Solutions
+"the Carl R Woese Institute for Genomic Biology at the University of Illinois Urbana Champaign": The Carl R Woese Institute for Genomic Biology University of Illinois at Urbana Champaign
+"Education Justice Project University of Illinois": University of Illinois Education Justice Project
+"Facilities and Services at University of Illinois Urbana Champaign": Facilities and Services University of Illinois at Urbana Champaign
+
+# ─── Manual canonical overrides (chain-resolved by build-data.ts) ───
+"Schlumberger Technology": Schlumberger
+"Goldman Sachs and Co": Goldman Sachs
+"Bloomberg LP": Bloomberg
+"Cummins": Cummins
+"Yahoo Holdings": Yahoo
+"Visa Inc.": Visa
+"Visa USA": Visa
+"Apple Inc.": Apple
+"Apple and its subsidiaries": Apple
+"Oracle America, Inc.": Oracle
+"Nvidia": NVIDIA
+"Linkedin": LinkedIn
+"Adobe Systems": Adobe
+"Uber Technologies Inc.": Uber
+"Bayer US": Bayer
+"Caterpillar Inc.": Caterpillar
+"Cummins Inc.": Cummins
+"Wayfair LLC": Wayfair
+"ServiceNow, Inc.": ServiceNow
+"Brunswick Corporation": Brunswick
+"Crowe Global": Crowe
+"Micron Technology, Inc.": Micron Technology
+"Micron Technology": Micron
+"Micron": Micron
+"Qualcomm Technologies": Qualcomm
+"Qualcomm Technologies, Inc.": Qualcomm
+"Qualcomm Technology": Qualcomm
+"Goldman Sachs Services": Goldman Sachs
+"Bloomberg": Bloomberg
+
+# ─── Additional manual aliases discovered during top-100 review ───
+"University of Illinois UIUC": University of Illinois Urbana-Champaign
+"Deloitte & Touche": Deloitte
+"Deloitte Touche": Deloitte
+"Synchrony Bank": Synchrony
+"Synchrony Financial": Synchrony
+"Amazon or its subsidiary/affiliate": Amazon
+"Amazon and its subsidiary/affiliate": Amazon
+"Oath Holdings": Yahoo
+"Oath": Yahoo
+"PricewaterhouseCoopers Advisory Services": PwC
+"Jump Operations": Jump Trading
+"Jump Trading Group": Jump Trading
+"Barclays Services": Barclays
+"Barclays Bank": Barclays
+"Citibank NA": Citi
+"Citibank, NA": Citi
+"Citigroup": Citi
+"Archer Daniels Midland Company": Archer Daniels Midland
+"ADM": Archer Daniels Midland
+"DRW Holdings": DRW
+"DRW Trading Group": DRW
+"The MathWorks": MathWorks
+"Mott MacDonald Holdings": Mott MacDonald
+"Monsanto Company": Monsanto
+
+# ─── Top-101–200 obvious alias merges noticed during top-100 review ───
+"Tesla Motors, Inc.": Tesla
+"Tesla Motors": Tesla
+"PricewaterhouseCoopers LLP": PwC
+"PricewaterhouseCoopers": PwC
+"Chicago Mercantile Exchange": CME Group
+"Verizon Media": Yahoo
+"Wolfram Alpha LLC": Wolfram Research
+"Graybar": Graybar Electric
+"McKinsey and Company United States": McKinsey and Company
+"McKinsey & Company": McKinsey and Company
+"Tencent America": Tencent
+"Experian Information Solutions": Experian
+"AECOM Technical Services": AECOM
+"HERE North America": HERE Technologies
+"Randstad North America, LP": Randstad
+"Experis US": Experis
+"Intel 100": Intel
+"Motorola Mobility": Motorola Mobility
+"Texas A and M University": Texas A&M University
+"University of California Santa Barbara": UCSB
+"University of California Los Angeles": UCLA
+"University of California San Diego": UCSD
+"University of California Davis": UC Davis
+
+# ─── UIUC sub-entities kept distinct (split out of the UIUC blob) ───
+# Board of Trustees of the University of Illinois — the legal employing entity
+"The Board of Trustees of the University of Illinois": Board of Trustees of the University of Illinois
+"Board Of Trustees Of The University Of Illinois": Board of Trustees of the University of Illinois
+"BOARD OF TRUSTEES UNIVERSITY OF ILLINOIS": Board of Trustees of the University of Illinois
+"Board of Trustees University of Illinois": Board of Trustees of the University of Illinois
+"University of Illinois Board of Trustees": Board of Trustees of the University of Illinois
+"The University of Illinois Board of Trustees": Board of Trustees of the University of Illinois
+"The Board of Trustees of University of Illinois": Board of Trustees of the University of Illinois
+"Board of Trustees of University of Illinois": Board of Trustees of the University of Illinois
+# NCSA — research center under UIUC
+"National Center for Supercomputing Applications": NCSA
+"National Center for Supercomputing Applications (University of Illinois at Urbana Champaign)": NCSA
+"National Center for Supercomputing Applications University of Illinois at Urbana Champaign": NCSA
+"National Center for Supercomputing Applications (NCSA)": NCSA
+"National Center for Supercomputing Applications NCSA": NCSA
+"NCSA University of Illinois at Urbana Champaign": NCSA
+"University of Illinois at Urbana Champaign NCSA": NCSA
+
+# ─── Top-500 alias normalizations ───
+"Meta Platform": Meta
+"DFS Services": Discover Financial Services
+"Uber Freight": Uber Freight
+"FedEx Services": FedEx
+"Federal Express": FedEx
+"Tiktok": ByteDance
+"JPMorgan Chase and Co": JPMorgan Chase
+"JP Morgan Chase and Co": JPMorgan Chase
+"Citrix Systems Inc.": Citrix
+"Two Sigma Investments LP": Two Sigma
+"Abbott Laboratories": Abbott
+"3M Company": 3M
+"American Express Company": American Express
+"American International Group": AIG
+"Bayer R and D Services": Bayer
+"Bayer Research and Development Services": Bayer
+"Bayer Monsanto": Bayer
+"Merck Sharp and Dohme": Merck
+"Sanofi US Services": Sanofi
+"Liberty Mutual Insurance Company": Liberty Mutual
+"State Farm Mutual Automobile Insurance Company": State Farm
+"State Farm Insurance Companies": State Farm
+"Gartner Inc.": Gartner
+"Hisense USA": Hisense
+"Robert Bosch": Bosch
+"PCE Paragon Solutions USA": PCE Paragon Solutions
+"Walmart Inc.": Walmart
+"Walmart Global Tech": Walmart
+"Godaddy.com": GoDaddy
+"INFOSYS LIMITED": Infosys
+"FMR d/b/a Fidelity Investments": Fidelity Investments
+"HCL Global Systems": HCL
+"S and P GLOBAL": S&P Global
+"Aon Service": Aon
+"Walter P Moore and Associates": Walter P Moore
+"Stantec Consulting Services": Stantec
+"HDR Engineering": HDR
+"Skidmore Owings and Merrill SOM": Skidmore Owings and Merrill
+"Lawrence Livermore National Security": Lawrence Livermore National Laboratory
+"UT Battelle ORNL": Oak Ridge National Laboratory
+"Triad National Security": Los Alamos National Laboratory
+"Tata Consultancy Services Limited": Tata Consultancy Services
+"Sibel Health": Sibel
+"Two Sigma Investments": Two Sigma
+"The World Bank": World Bank
+"The Boston Consulting Group": Boston Consulting Group
+"The Home Depot": Home Depot
+"Home Depot Management Company": Home Depot
+"Visa Technology and Operations": Visa
+"Lucid USA": Lucid Motors
+"COUNTRY Financial Digitalab": Country Financial
+"Deloitte Touche Tohmatsu Limited": Deloitte
+"CCC Information Service": CCC Intelligent Solutions
+
+# ─── Final canonical merges from top-500 pass ───
+"Advanced Micro Devices (AMD)": AMD
+'Advanced Micro Devices ("AMD")': AMD
+'Advanced Micro Devices ("AMD)': AMD
+"Deloitte and Touch": Deloitte
+"Amazon Service": Amazon
+"Battelle Energy Alliance": Idaho National Laboratory

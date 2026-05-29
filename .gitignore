@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.env*.local
+public/data.json
+public/logos
+
+# Source xlsx files are copyright UIUC Career Center — not redistributed.
+# Download from UIUC Career Center website and place under data/raw/.
+data/raw/**/*.xlsx
