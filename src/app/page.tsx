@@ -86,8 +86,6 @@ export default function Home() {
       />
 
       <main className="mx-auto max-w-6xl w-full px-4 sm:px-6 py-4 flex-1 space-y-4">
-        {data && <Disclaimer terms={data.terms} />}
-
         {data && (
           <TrendPanel
             data={data}
@@ -149,6 +147,8 @@ export default function Home() {
             )
           )}
         </section>
+
+        {data && <Disclaimer terms={data.terms} />}
       </main>
 
       <Footer
