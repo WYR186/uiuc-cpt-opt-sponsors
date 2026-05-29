@@ -21,9 +21,9 @@ export type UrlState = {
 
 const DEFAULTS: UrlState = {
   term: 'all',
-  cohort: 'ug',
+  cohort: 'all',
   phase: 'all',
-  view: 'major',
+  view: 'employer',
   q: '',
   pick: null,
   hideAcademic: false,
