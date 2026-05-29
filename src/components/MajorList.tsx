@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import clsx from 'clsx';
 import type { MajorBucket, EmployerBucket } from '@/lib/types';
+import { COLLEGES, collegeForMajor, collegeMeta, type CollegeId } from '@/lib/colleges';
 import dynamic from 'next/dynamic';
 import { CompanyLogo } from './CompanyLogo';
 import { Highlight } from '@/lib/highlight';
@@ -12,6 +13,8 @@ const DonutMini = dynamic(() => import('./DonutMini').then((m) => m.DonutMini), 
   ssr: false,
   loading: () => <div className="skeleton" style={{ height: 200, borderRadius: 6 }} />,
 });
+
+const COLLEGE_ORDER = new Map(COLLEGES.map((c, i) => [c.id, i] as const));
 
 export function MajorList({
   majors,
@@ -28,76 +31,145 @@ export function MajorList({
   onJumpToEmployer: (employer: string) => void;
   onPickChange: (pick: string | null) => void;
 }) {
-  const rows = Object.entries(majors)
-    .map(([name, v]) => ({ name, ...v }))
-    .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
+  const { groups, max } = useMemo(() => {
+    const rows = Object.entries(majors).map(([name, v]) => ({ name, ...v }));
+    const maxTotal = rows.reduce((m, r) => Math.max(m, r.total), 0) || 1;
+    const byCollege = new Map<CollegeId, typeof rows>();
+    for (const r of rows) {
+      const c = collegeForMajor(r.name);
+      (byCollege.get(c) ?? byCollege.set(c, []).get(c)!).push(r);
+    }
+    const out = [...byCollege.entries()].map(([id, list]) => ({
+      id,
+      meta: collegeMeta(id),
+      majors: list.sort((a, b) => b.total - a.total || a.name.localeCompare(b.name)),
+      total: list.reduce((s, r) => s + r.total, 0),
+    }));
+    out.sort((a, b) => b.total - a.total || (COLLEGE_ORDER.get(a.id)! - COLLEGE_ORDER.get(b.id)!));
+    return { groups: out, max: maxTotal };
+  }, [majors]);
 
   const [expanded, setExpanded] = useState<string | null>(pick);
+  const [opened, setOpened] = useState<Set<CollegeId>>(() =>
+    pick ? new Set([collegeForMajor(pick)]) : new Set()
+  );
   const rowRefs = useRef<Record<string, HTMLLIElement | null>>({});
+
+  // Colleges are collapsed by default; searching reveals all so no match hides.
+  const forceOpen = query.trim().length > 0;
+  const isCollegeOpen = (id: CollegeId) => forceOpen || opened.has(id);
 
   useEffect(() => {
     setExpanded(pick);
-    if (pick && rowRefs.current[pick]) {
-      rowRefs.current[pick]?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    if (pick) {
+      const c = collegeForMajor(pick);
+      setOpened((prev) => (prev.has(c) ? prev : new Set(prev).add(c)));
+      requestAnimationFrame(() => {
+        rowRefs.current[pick]?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      });
     }
   }, [pick]);
 
-  if (!rows.length) return null;
+  if (!groups.length) return null;
+
+  const toggleCollege = (id: CollegeId) =>
+    setOpened((prev) => {
+      const n = new Set(prev);
+      n.has(id) ? n.delete(id) : n.add(id);
+      return n;
+    });
 
   return (
-    <ul className="rounded-md overflow-hidden" style={{ border: '1px solid var(--border)' }}>
-      {rows.map((row, i) => {
-        const isOpen = expanded === row.name;
+    <div className="rounded-md overflow-hidden" style={{ border: '1px solid var(--border)' }}>
+      {groups.map((g, gi) => {
+        const open = isCollegeOpen(g.id);
         return (
-          <li
-            key={row.name}
-            ref={(el) => { rowRefs.current[row.name] = el; }}
-            style={{ borderTop: i === 0 ? 'none' : '1px solid var(--border)' }}
-          >
+          <section key={g.id} style={{ borderTop: gi === 0 ? 'none' : '1px solid var(--border)' }}>
             <button
-              onClick={() => {
-                const next = isOpen ? null : row.name;
-                setExpanded(next);
-                onPickChange(next);
-              }}
-              aria-expanded={isOpen}
-              className="w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-[var(--bg-elev)] transition-colors"
-              style={{ minHeight: 44 }}
+              onClick={() => toggleCollege(g.id)}
+              aria-expanded={open}
+              title={g.meta.full}
+              className="w-full flex items-center gap-2 px-3 py-2 text-left transition-colors hover:bg-[var(--bg-elev)]"
+              style={{ background: 'var(--bg-elev)' }}
             >
               <ChevronRight
-                size={14}
-                className={clsx('transition-transform shrink-0', isOpen && 'rotate-90')}
+                size={13}
+                className={clsx('transition-transform shrink-0', open && 'rotate-90')}
                 style={{ color: 'var(--fg-subtle)' }}
               />
-              <span className="text-[14px] truncate">
-                <Highlight text={row.name} query={query} />
+              <span className="text-[12.5px] font-semibold truncate" style={{ color: 'var(--fg)' }}>
+                {g.meta.short}
               </span>
-              <span
-                className="ml-auto num text-[13px] tabular-nums shrink-0"
-                style={{ color: 'var(--fg-muted)' }}
-                aria-label={`${row.total} hires`}
-              >
-                {row.total}
+              <span className="text-[11px] shrink-0" style={{ color: 'var(--fg-subtle)' }}>
+                {g.majors.length}
+              </span>
+              <span className="ml-auto num text-[12px] tabular-nums shrink-0" style={{ color: 'var(--fg-muted)' }}>
+                {g.total.toLocaleString()}
               </span>
             </button>
 
-            {isOpen && (
-              <div
-                className="px-4 pb-4"
-                style={{ background: 'var(--bg-elev)' }}
-              >
-                <ExpandedMajor
-                  employers={row.employers}
-                  employerMeta={employers}
-                  query={query}
-                  onJumpToEmployer={onJumpToEmployer}
-                />
-              </div>
+            {open && (
+              <ul>
+                {g.majors.map((row) => {
+                  const isOpen = expanded === row.name;
+                  const pct = Math.max(2, Math.round((row.total / max) * 100));
+                  return (
+                    <li
+                      key={row.name}
+                      ref={(el) => { rowRefs.current[row.name] = el; }}
+                      style={{ borderTop: '1px solid var(--border)' }}
+                    >
+                      <button
+                        onClick={() => {
+                          const next = isOpen ? null : row.name;
+                          setExpanded(next);
+                          onPickChange(next);
+                        }}
+                        aria-expanded={isOpen}
+                        className="relative w-full flex items-center gap-2 pl-7 pr-3 py-1.5 text-left transition-colors hover:bg-[var(--bg-elev)]"
+                        style={isOpen ? { boxShadow: 'inset 2px 0 0 var(--accent)' } : undefined}
+                      >
+                        <span
+                          aria-hidden
+                          className="absolute inset-y-0 left-0 pointer-events-none"
+                          style={{ width: `${pct}%`, background: 'color-mix(in srgb, var(--accent) 9%, transparent)' }}
+                        />
+                        <ChevronRight
+                          size={12}
+                          className={clsx('transition-transform shrink-0 relative', isOpen && 'rotate-90')}
+                          style={{ color: 'var(--fg-subtle)' }}
+                        />
+                        <span className="text-[13px] truncate relative">
+                          <Highlight text={row.name} query={query} />
+                        </span>
+                        <span
+                          className="ml-auto num text-[12.5px] tabular-nums shrink-0 relative"
+                          style={{ color: 'var(--fg-muted)' }}
+                          aria-label={`${row.total} hires`}
+                        >
+                          {row.total}
+                        </span>
+                      </button>
+
+                      {isOpen && (
+                        <div className="pl-7 pr-4 pb-4" style={{ background: 'var(--bg-elev)' }}>
+                          <ExpandedMajor
+                            employers={row.employers}
+                            employerMeta={employers}
+                            query={query}
+                            onJumpToEmployer={onJumpToEmployer}
+                          />
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
             )}
-          </li>
+          </section>
         );
       })}
-    </ul>
+    </div>
   );
 }
 
