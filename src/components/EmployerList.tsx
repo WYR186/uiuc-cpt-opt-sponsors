@@ -4,14 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import clsx from 'clsx';
 import type { EmployerBucket } from '@/lib/types';
-import dynamic from 'next/dynamic';
 import { CompanyLogo } from './CompanyLogo';
 import { Highlight } from '@/lib/highlight';
-
-const DonutMini = dynamic(() => import('./DonutMini').then((m) => m.DonutMini), {
-  ssr: false,
-  loading: () => <div className="skeleton" style={{ height: 200, borderRadius: 6 }} />,
-});
+import { BreakdownBars } from './BreakdownBars';
 
 export function EmployerList({
   employers,
@@ -75,7 +70,7 @@ export function EmployerList({
                 className="ml-auto num text-[13px] tabular-nums shrink-0"
                 style={{ color: 'var(--fg-muted)' }}
               >
-                {row.total}
+                {row.total.toLocaleString()}
               </span>
             </button>
 
@@ -106,7 +101,7 @@ function ExpandedEmployer({
 }) {
   return (
     <div className="pt-3 space-y-4">
-      <DonutMini
+      <BreakdownBars
         rows={majors}
         onPick={onJumpToMajor}
         renderLegendItem={(r) => <span className="truncate">{r.name}</span>}
@@ -125,7 +120,7 @@ function ExpandedEmployer({
                 >
                   <Highlight text={m.name} query={query} />
                 </button>
-                <span className="ml-auto num text-[12px]" style={{ color: 'var(--fg-subtle)' }}>{m.count}</span>
+                <span className="ml-auto num text-[12px]" style={{ color: 'var(--fg-subtle)' }}>{m.count.toLocaleString()}</span>
               </li>
             ))}
           </ul>

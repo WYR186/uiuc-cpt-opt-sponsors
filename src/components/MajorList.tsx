@@ -5,14 +5,9 @@ import { ChevronRight } from 'lucide-react';
 import clsx from 'clsx';
 import type { MajorBucket, EmployerBucket } from '@/lib/types';
 import { COLLEGES, collegeForMajor, collegeMeta, type CollegeId } from '@/lib/colleges';
-import dynamic from 'next/dynamic';
 import { CompanyLogo } from './CompanyLogo';
 import { Highlight } from '@/lib/highlight';
-
-const DonutMini = dynamic(() => import('./DonutMini').then((m) => m.DonutMini), {
-  ssr: false,
-  loading: () => <div className="skeleton" style={{ height: 200, borderRadius: 6 }} />,
-});
+import { BreakdownBars } from './BreakdownBars';
 
 const COLLEGE_ORDER = new Map(COLLEGES.map((c, i) => [c.id, i] as const));
 
@@ -145,9 +140,9 @@ export function MajorList({
                         <span
                           className="ml-auto num text-[12.5px] tabular-nums shrink-0 relative"
                           style={{ color: 'var(--fg-muted)' }}
-                          aria-label={`${row.total} hires`}
+                          aria-label={`${row.total.toLocaleString()} hires`}
                         >
-                          {row.total}
+                          {row.total.toLocaleString()}
                         </span>
                       </button>
 
@@ -186,7 +181,7 @@ function ExpandedMajor({
 }) {
   return (
     <div className="pt-3 space-y-4">
-      <DonutMini
+      <BreakdownBars
         rows={employers}
         onPick={onJumpToEmployer}
         renderLegendItem={(r) => (
@@ -214,7 +209,7 @@ function ExpandedMajor({
                 >
                   <Highlight text={e.name} query={query} />
                 </button>
-                <span className="ml-auto num text-[12px]" style={{ color: 'var(--fg-subtle)' }}>{e.count}</span>
+                <span className="ml-auto num text-[12px]" style={{ color: 'var(--fg-subtle)' }}>{e.count.toLocaleString()}</span>
               </li>
             ))}
           </ul>

@@ -83,7 +83,7 @@ export function TopBar({
             </button>
           </div>
 
-          <label className="relative flex-1 min-w-[200px] order-2 sm:order-3 w-full sm:w-auto sm:max-w-md">
+          <label className="relative order-2 sm:order-3 w-full">
             <Search
               size={16}
               className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"

@@ -117,18 +117,21 @@ export function HeroStrip({
     <button
       key={`${keySuffix}:${e.name}`}
       onClick={() => onPick(e.name)}
-      title={`${e.name} · ${e.total} hires`}
-      aria-label={`Filter by ${e.name}, ${e.total} hires`}
-      className="hero-card flex flex-col items-center gap-1 px-3 py-2 rounded-lg shrink-0 transition-transform hover:-translate-y-0.5"
+      title={`${e.name} · ${e.total.toLocaleString()} hires`}
+      aria-label={`Filter by ${e.name}, ${e.total.toLocaleString()} hires`}
+      className="hero-card flex flex-col items-center gap-1.5 px-3 py-2.5 rounded-lg shrink-0 transition-transform hover:-translate-y-0.5"
       style={{
         background: 'var(--bg-elev)',
         border: '1px solid var(--border)',
-        minWidth: 84,
+        width: 116,
       }}
     >
-      <CompanyLogo name={e.name} domain={e.domain} size={48} fallbackText />
-      <span className="text-[11px] font-medium num whitespace-nowrap" style={{ color: 'var(--fg-muted)' }}>
-        {e.total} hires
+      <CompanyLogo name={e.name} domain={e.domain} size={40} fallbackText />
+      <span className="w-full text-[11.5px] font-medium leading-tight text-center truncate" style={{ color: 'var(--fg)' }}>
+        {e.name}
+      </span>
+      <span className="text-[10.5px] num whitespace-nowrap" style={{ color: 'var(--fg-subtle)' }}>
+        {e.total.toLocaleString()} hires
       </span>
     </button>
   );

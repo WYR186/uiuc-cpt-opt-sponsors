@@ -28,6 +28,10 @@ export function TrendChart({
   // If every value is 0, render an empty-state hint instead of an unreadable flat line.
   const hasAny = data.some((p) => p.total > 0);
 
+  // Abbreviate axis ticks (10000 -> "10k") so the widest label fits the narrow
+  // gutter; the raw 5-digit label was being clipped to "0000".
+  const fmtAxis = (v: number) => (v >= 1000 ? `${v / 1000}k` : `${v}`);
+
   return (
     <div style={{ width: '100%', height }} className="relative">
       <ResponsiveContainer>
@@ -45,8 +49,9 @@ export function TrendChart({
             tick={{ fontSize: 11, fill: 'var(--fg-muted)' }}
             tickLine={false}
             axisLine={{ stroke: 'var(--border)' }}
-            width={36}
+            width={34}
             allowDecimals={false}
+            tickFormatter={fmtAxis}
           />
           <Tooltip
             cursor={{ stroke: 'var(--border-strong)', strokeDasharray: '3 3' }}
@@ -61,7 +66,7 @@ export function TrendChart({
               const p = entries?.[0]?.payload as TrendPoint | undefined;
               return p?.label ?? '';
             }}
-            formatter={(value: number, name: string) => [`${value}`, name]}
+            formatter={(value: number, name: string) => [value.toLocaleString(), name]}
           />
           <Legend
             verticalAlign="top"
